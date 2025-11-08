@@ -1,0 +1,176 @@
+@use "@/scss/tools" as *;
+
+.mega-menu {
+	position: fixed;
+	top: var(--header-height);
+	left: 0;
+	background: var(--color-white);
+	max-width: var(--container-width);
+	margin-inline: container-padding();
+
+	visibility: hidden;
+	z-index: -1000;
+	pointer-events: none;
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: all 0.3s;
+	height: calc(100dvh - var(--header-height) - var(--nav-bar-height));
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	@include media($tablet) {
+		//height: calc(100vh - var(--header-height) - var(--nav-bar-height));
+		top: unset;
+		bottom: var(--nav-bar-height);
+		margin-left: unset;
+		transform: translateY(100%);
+	}
+
+	&.open-menu {
+		transform: translateY(0);
+		visibility: visible;
+		opacity: 1;
+		z-index: 1;
+		pointer-events: auto;
+	}
+	.sub-menu-open & {
+		overflow: hidden;
+	}
+
+	&__list {
+		@include reset;
+		list-style-type: none;
+		columns: 3;
+		column-gap: 20px;
+		padding: 20px;
+
+		font-size: 16px;
+
+		@include media($tablet) {
+			columns: unset;
+		}
+	}
+
+	&__item {
+		break-inside: avoid;
+		display: grid;
+		gap: 12px;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__btn {
+		@include reset;
+		border: none;
+		background: transparent;
+		display: flex;
+		text-align: left;
+		justify-content: space-between;
+		gap: 10px;
+
+		&::after {
+			content: "";
+			@include square(14px);
+			flex-shrink: 0;
+			background: url("../images/icons/arrow-right-small.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100%;
+			border-radius: 50%;
+
+			@include media($tablet, min) {
+				display: none;
+			}
+		}
+	}
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		transition: all 0.3s;
+		display: inline-flex;
+
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+
+	&__sub-list {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		@include media($tablet) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100vh - var(--header-height) - var(--nav-bar-height));
+			background: var(--color-white);
+			padding: 20px;
+
+			visibility: hidden;
+			opacity: 0;
+			transform: translateX(100%);
+			overflow-y: auto;
+
+			transition: all 0.3s;
+
+			&.sub-menu-open {
+				visibility: visible;
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&__sub-list-item {
+		display: flex;
+		gap: 10px;
+		padding-left: 10px;
+
+		&::before {
+			content: "";
+			@include square(4px);
+			flex-shrink: 0;
+			background: var(--color-gray-3);
+			border-radius: 50%;
+			margin-top: 0.4em;
+		}
+	}
+	&__sub-list-parent-item {
+	}
+	&__sub-list-btn {
+	}
+	&__sub-list-btn {
+		@extend .mega-menu__btn;
+		@include media($tablet, min) {
+			display: none;
+		}
+		&::after {
+			margin-top: 0.1em;
+			transform: scale(-1, 1);
+		}
+	}
+	&__sub-list-parent-link {
+		@extend .mega-menu__link;
+		order: 2;
+	}
+	&__sub-list-btn-link {
+		@extend .mega-menu__link;
+	}
+
+	&__sub-list-link {
+		color: var(--color-gray-3);
+		text-decoration: none;
+		transition: all 0.3s;
+
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+}

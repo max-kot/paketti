@@ -1,0 +1,32 @@
+@use "@/scss/tools" as *;
+
+
+.seo-section {
+
+		&__container {
+		}
+
+		&__wrapper {
+		}
+
+		&__descr {
+			@include reset-child;
+		}
+
+		&__btn {
+			@include reset;
+			border: none;
+			text-align: left;
+			background: transparent;
+			text-decoration: underline;
+			color: var(--color-blue);
+
+			&.list-hider-btn-hidden {
+				display: none;
+			}
+
+			@include media($mobile, min) {
+				display: none;
+			}
+		}
+}

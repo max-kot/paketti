@@ -1,0 +1,46 @@
+@use "@/scss/tools" as *;
+
+.catalog {
+	&__title {
+	}
+
+	&__list {
+	}
+}
+
+.catalog-item {
+	background: var(--color-catalog);
+
+	&__link {
+		padding: adapt(20, 8) adapt(16, 8);
+		color: inherit;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: adapt(20, 14);
+		text-transform: uppercase;
+		line-height: 1;
+		display: grid;
+		justify-items: center;
+		align-items: center;
+		text-align: center;
+		gap: adapt(16, 8);
+		transition: all 0.3s;
+		height: 100%;
+		@include hover {
+			color: var(--color-accent);
+			.catalog-item__image {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__image {
+		@include reset;
+		width: adapt(250, 150);
+		transition: all 0.3s;
+	}
+
+	&__text {
+		@include reset;
+	}
+}

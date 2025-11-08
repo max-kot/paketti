@@ -1,0 +1,40 @@
+@use "@/scss/tools" as *;
+
+.scroll-to-top {
+	position: fixed;
+	bottom: calc(var(--nav-bar-height) + 10px);
+	right: container-padding(1360px);
+	flex-shrink: 0;
+	@include square(56px);
+	border: 1px solid var(--color-gray-4);
+	border-radius: 50%;
+	color: var(--color-accent);
+	background: var(--color-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 4px;
+
+	transform: translateY(100%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+
+	transition: all 0.3s;
+
+	&.active {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+	}
+	svg {
+		transition: all 0.3s;
+	}
+
+	@include hover {
+		svg {
+			transform: translateY(-4px);
+		}
+	}
+}

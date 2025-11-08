@@ -1,0 +1,144 @@
+@use "@/scss/tools" as *;
+// Typography
+.title {
+	@include reset;
+	font-size: adapt(52, 26);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.title-2 {
+	@include reset;
+	font-size: adapt(36, 24);
+	font-weight: 700;
+	text-align: center;
+
+	&:not(:last-child) {
+		margin-bottom: adapt(32, 24);
+	}
+}
+.title-3 {
+	@include reset;
+	font-size: adapt(18, 14);
+	font-weight: 600;
+}
+// Grid
+.grid {
+	@include reset;
+	list-style-type: none;
+	display: grid;
+	gap: adapt(24, 8);
+}
+.grid-4 {
+	--min-width: 260px;
+	grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr));
+
+	@include media($tablet) {
+		--min-width: 200px;
+	}
+
+	@include media($mobile-sm) {
+		--min-width: 160px;
+	}
+}
+
+.hit-flash {
+	display: inline-flex;
+	background: var(--color-blue);
+	border-radius: 1px;
+	padding: 4px 8px;
+	color: var(--color-white);
+	font-weight: 600;
+	font-size: 12px;
+}
+.fav-btn {
+	@include square(42);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-gray-2);
+	transition: all 0.3s;
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+
+	svg path {
+		fill: transparent;
+		transition: all 0.3s;
+	}
+
+	@include hover {
+		color: var(--color-accent);
+		svg path {
+			fill: currentColor;
+		}
+	}
+}
+
+//=== Custom select
+.custom-select {
+	position: relative;
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		height: 100px;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: absolute;
+		z-index: 5;
+		top: 100%;
+		left: 0;
+		background: var(--color-white);
+		border: 1px solid var(--color-gray-5);
+		border-radius: 6px;
+		transform: translateY(-30px);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: all 0.3s;
+
+		.custom-select-active & {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+		&.list--up {
+			top: 0;
+			transform: translateY(-100%);
+			//bottom: 100%;
+		}
+	}
+	&__select-field {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+
+		&::after {
+			content: "";
+			flex-shrink: 0;
+			width: 8px;
+			height: 4px;
+			background: url("../images/icons/drop-down-arrow.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			transition: all 0.3s;
+
+			.custom-select-active & {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+.custom-select-hidden {
+	visibility: hidden;
+	position: absolute;
+	z-index: -1000;
+	pointer-events: none;
+	opacity: 0;
+}

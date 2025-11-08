@@ -1,0 +1,77 @@
+@use "@/scss/tools" as *;
+
+.spoiler {
+	$padding: adapt(40, 24);
+
+	transition: background var(--duration-fast);
+	padding: unset;
+	&.spoiler-active {
+		background: var(--color-green);
+	}
+	&__btn {
+		text-align: left;
+		padding: $padding;
+		border: none;
+		background: transparent;
+		width: 100%;
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: adapt(16, 8);
+		padding-block: var(--gap-xs);
+
+		&::before {
+			font-size: adapt(60, 40);
+		}
+
+		span {
+			flex-shrink: 0;
+			position: relative;
+			margin-left: auto;
+			@include square(adapt(58, 50));
+			background: var(--color-grey);
+			border-radius: 100%;
+			border: 1px solid var(--color-black);
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 18px;
+				height: 6px;
+				background: var(--color-black);
+			}
+
+			&::after {
+				transform: translate(-50%, -50%) rotate(90deg);
+				transition: transform var(--duration-fast);
+				.spoiler-active & {
+					transform: translate(-50%, -50%) rotate(180deg);
+				}
+			}
+		}
+	}
+
+	&__content {
+		.spoiler-active & {
+		}
+	}
+	&__wrapper {
+		//padding-top: var(--gap-m);
+		padding:0 $padding $padding;
+		//margin-top: var(--gap-m);
+	}
+
+	&__description {
+		padding-top: $padding;
+		border-top: 1px solid var(--color-black);
+	}
+	&__text {
+	}
+}

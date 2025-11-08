@@ -1,0 +1,77 @@
+@use "@/scss/tools" as *;
+
+.hero {
+	position: relative;
+	padding: unset;
+	padding-block: adapt(95, 32);
+
+	@include media($mobile) {
+	}
+	&__container {
+		min-height: calc(100vh - var(--header-height));
+
+		@include media($mobile) {
+			padding-bottom: 55%;
+		}
+	}
+	&__content {
+		max-width: 662px;
+		display: grid;
+		gap: adapt(44, 24);
+	}
+	&__title {
+	}
+
+	&__list {
+		@include reset;
+		list-style-type: none;
+		display: grid;
+		gap: rem(16);
+		max-width: 542px;
+	}
+
+	&__item {
+		display: flex;
+		font-size: 18px;
+		font-weight: 600;
+		gap: 10px;
+
+		&::before {
+			content: "";
+			background-image: url("../images/hero-item.png");
+			background-position: center center; /* x y */
+			background-size: 100%;
+			background-repeat: no-repeat;
+			flex: 0 0 32px;
+			height: 32px;
+			padding-top: 9px;
+		}
+	}
+
+	&__btn {
+		max-width: 300px;
+		justify-content: center;
+	}
+
+	&__image-box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		.bg-full {
+			@include media($mobile) {
+				display: none;
+			}
+		}
+		.bg-mobile {
+			@include media($mobile, min) {
+				display: none;
+			}
+		}
+		@include media($mobile) {
+			--object-pos: bottom;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+@use "@/scss/tools" as *;
+
+.header-menu {
+	&__list {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: adapt(24, 10, $tablet) adapt(24, 10);
+
+		@include media($tablet) {
+			flex-direction: column;
+		}
+
+		a {
+			display: inline-flex;
+			color: inherit;
+			text-decoration: none;
+			font-size: adapt(14, 16);
+			font-weight: 600;
+			&[aria-current] {
+				&::before {
+					left: 0;
+					right: 0;
+				}
+			}
+			@include hoverLine(center, var(--color-accent));
+		}
+	}
+}

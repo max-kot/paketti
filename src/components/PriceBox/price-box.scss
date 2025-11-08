@@ -1,0 +1,32 @@
+@use "@/scss/tools" as *;
+
+.price-box {
+	display: grid;
+	gap: 10px;
+	
+	&__price-box {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 20px;
+	}
+
+	&__price {
+		font-weight: 800;
+		font-size: adapt(18, 16);
+	}
+
+	&__price-old,
+	&__text {
+		font-size: 14px;
+		color: var(--color-gray-4);
+		font-weight: 600;
+	}
+	&__price-old {
+		text-decoration: line-through;
+		
+	}
+
+	&__text {
+		flex: 1 1 100%;
+	}
+}

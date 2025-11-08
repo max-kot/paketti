@@ -1,0 +1,63 @@
+@use "../tools" as *;
+
+:root {
+	// Colors
+	--color-black: #000;
+	--color-white: #fff;
+	--color-dark: #2e332f;
+	--color-accent: #ee1d1d;
+	--color-accent-light: #ff2f2f;
+	--color-blue: #2c60e5;
+
+	--color-header: #f7f4f4;
+	--color-footer: #dfdcd7;
+	--color-catalog: #eeeae9;
+	--color-gray: #dedede;
+	--color-gray-2: #707070;
+	--color-gray-3: #5e5e5e;
+	--color-gray-4: #9f9f9f;
+	--color-gray-5: #ededf0;
+	--color-gray-6: #c4c4c4;
+
+	// Layouts
+	--header-height: 147px;
+	--nav-bar-height: 68px;
+	--section-padding: #{adapt(56, 30)};
+	// Container
+	--container-width: 1200px;
+	--container-padding: 10px; //! даже если контейнер на весь экран, отступы оставь а ширину сделай на 100%
+
+	//@include media($laptop-sm) {
+	//	--container-width: #{$tablet-sm}px;
+	//}
+	//@include media($tablet) {
+	//	--container-width: #{$mobile}px;
+	//}
+	//@include media($mobile) {
+	//	--container-width: #{$mobile-sm}px;
+	//}
+
+	// Border radius
+	--bd-radius-s: 8px;
+	--bd-radius: 14px;
+	--bd-radius-l: 46px;
+
+	// Shadows
+	--shadow: 0 5px 0 0 var(--color-dark);
+
+	// Fonts
+	--font-size-html: 100%; // 1rem = 1px ===> calc(1 / 16 * 100%)
+	--font-family-main: "OpenSans-VF", sans-serif;
+	--font-size: 14px;
+	--line-height: 130%;
+
+	&[lang="ru"] {
+		// поменять шрифт
+		//--font-family-main: "Sansation", sans-serif;
+	}
+
+	// Transitions speed
+	--duration-fast: 0.3s;
+	--duration-medium: 0.5s;
+	--duration-slow: 0.8s;
+}

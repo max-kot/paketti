@@ -1,0 +1,82 @@
+@use "@/scss/tools" as *;
+.nav-bar {
+	@include media($tablet) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: var(--color-header);
+		padding-inline: container-padding();
+		padding-block: 14px;
+	}
+	&__list {
+		@include reset;
+		list-style-type: none;
+		gap: 12px;
+		display: flex;
+		@include media($tablet) {
+			justify-content: center;
+			gap: 24px;
+		}
+	}
+
+	&__item {
+		&.home,
+		&.shop,
+		&.add {
+			@include media($tablet, min) {
+				display: none;
+			}
+		}
+
+		&.cart {
+			@include media($tablet, min) {
+				order: 2;
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		line-height: 1;
+		gap: 2px;
+		font-weight: 600;
+		transition: all 0.3s;
+
+		@include hover {
+			color: var(--color-gray-2);
+		}
+
+		&.active {
+			color: var(--color-accent);
+		}
+	}
+
+	&__counter {
+		position: absolute;
+		top: -4px;
+		right: 0;
+		font-size: 10px;
+		line-height: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--color-accent);
+		color: var(--color-white);
+		font-weight: 600;
+		border-radius: 50%;
+		@include square(16px);
+	}
+
+	&__icon {
+	}
+
+	&__text {
+	}
+}

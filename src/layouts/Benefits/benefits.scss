@@ -1,0 +1,32 @@
+@use "@/scss/tools" as *;
+
+.benefits {
+	padding-top: adapt(56, 32);
+
+	&__list {
+		@include reset;
+		list-style-type: none;
+
+		display: grid;
+		gap: 20px adapt(20, 10);
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	}
+	&__item {
+	}
+}
+.benefit-item {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 16px;
+	text-align: center;
+
+	&__icon {
+		@include square(66px);
+	}
+
+	&__text {
+		@include reset;
+		font-weight: 600;
+	}
+}
