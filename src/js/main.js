@@ -1,19 +1,18 @@
-import Swiper from "swiper";
-import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
+//import Swiper from "swiper";
+//import { Navigation, Autoplay } from 'swiper/modules';
+
+//import "ion-rangeslider";
+
+import { Fancybox } from "@fancyapps/ui";
 
 import { Menu } from "./modules/Menu";
 import { AutoCalc } from "./modules/AutoCalc";
 import { CustomSelect } from "./modules/CustomSelect";
-//import { ListHider } from "./modules/ListHider";
 import { ExcerptBox } from "./modules/ExcerptBox";
 import { cookies } from "./modules/Cookies";
 import { ScrollToTop } from "./modules/ScrollToTop";
 import { ResetInput } from "./modules/ResetInput";
-import $ from "jquery";
-import "ion-rangeslider";
-import "ion-rangeslider/css/ion.rangeSlider.min.css";
-import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 
 //import { jarallax } from "jarallax";
 //import 'jarallax/dist/jarallax.min.css';
@@ -61,7 +60,6 @@ new Swiper('.auto-slider', {
 	autoplay: {
 		delay: 5000,
 	},
-	modules: [Navigation, Autoplay],
 
 	// Navigation arrows
 	navigation: {

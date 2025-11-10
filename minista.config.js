@@ -87,9 +87,9 @@ export default defineConfig({
 		preprocessorOptions: {
 			scss: {
 				// Автоматически подключаем helpers во все SCSS-файлы
-		//		additionalData: `
-      //    @use '@/styles/helpers' as *;
-      //  `,
+				//		additionalData: `
+				//    @use '@/styles/helpers' as *;
+				//  `,
 				// Убираем варнинги от старого API
 				silenceDeprecations: ['legacy-js-api'],
 			},
