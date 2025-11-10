@@ -50,7 +50,7 @@ const phones = [
 	},
 	{
 		"type": "link",
-		"icon": "images/icons/inst.svg",
+		"icon": "../images/icons/inst.svg",
 		"text": 'paketti.by',
 		"href": 'https://www.instagram.com/paketti.by/',
 	},

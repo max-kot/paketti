@@ -6,14 +6,13 @@ export class Menu {
 			activeClass: 'open-menu',
 			btnActiveClass: 'active',
 			closeBtns: ['a'],
-			scrollTo: '', // чтобы скролил вначало родительского контейнера (смотри проект paketti megamenu > submenu), при открытии последнего пункта нужно было вручную скроллить до сабменю
+			scrollTo: '', // если нужно прокрутить контейнер до submenu
 		};
 
 		this.params = { ...defaultParams, ...params };
-		this.menu = this.params.menu;
-		this.menuEl = document.querySelector(this.menu);
-		this.btn = this.params.btn;
-		this.btnEl = document.querySelectorAll(this.btn);
+		this.menuEl = document.querySelector(this.params.menu);
+		this.btnEl = document.querySelectorAll(this.params.btn);
+
 		this.init();
 	}
 
@@ -25,42 +24,42 @@ export class Menu {
 
 	init() {
 		document.addEventListener('click', (e) => {
-			if (e.target.closest(this.btn)) {
-				const btn = e.target.closest(this.btn);
-				if (btn.tagName === 'A') {
-					e.preventDefault();
-				}
-				const menu = this.menuEl;
-				if (!menu) return;
+			const menu = this.menuEl;
+			const isBtn = e.target.closest(this.params.btn);
+			const isInsideMenu = e.target.closest(this.params.menu);
+
+			if (isBtn) {
+				const btn = isBtn;
+				if (btn.tagName === 'A') e.preventDefault();
+
 				menu.classList.toggle(this.params.activeClass);
 				document.documentElement.classList.toggle(this.params.activeClass);
-					this.btnEl.forEach(btn => btn.classList.toggle(this.params.btnActiveClass));
+				this.btnEl.forEach(b => b.classList.toggle(this.params.btnActiveClass));
 
+				// если нужно автоскроллить к подменю
 				if (this.params.scrollTo) {
 					const megaMenu = menu.closest(this.params.scrollTo);
-					const menuRect = megaMenu.getBoundingClientRect();
-					const subRect = menu.getBoundingClientRect();
-					//console.log(menuRect);
-
-					// Смещение subMenu относительно контейнера
-					const scrollTop = megaMenu.scrollTop + (subRect.top - menuRect.top);
-
-					megaMenu.scrollTo({
-						top: scrollTop,
-						behavior: 'smooth'
-					});
-				}
-			}
-			if (this.params.closeBtns.length) {
-				const menu = this.menuEl;
-				const allBtns = this.params.closeBtns.join(',');
-
-				if (e.target.closest(allBtns)) {
-					if (menu.classList.contains(this.params.activeClass)) {
-						this.closeMenu(menu);
+					if (megaMenu) {
+						const menuRect = megaMenu.getBoundingClientRect();
+						const subRect = menu.getBoundingClientRect();
+						const scrollTop = megaMenu.scrollTop + (subRect.top - menuRect.top);
+						megaMenu.scrollTo({ top: scrollTop, behavior: 'smooth' });
 					}
 				}
+				return; // не продолжаем, если это клик по кнопке
 			}
-		})
+
+			if (this.params.closeBtns.length && menu.classList.contains(this.params.activeClass)) {
+				const allBtns = this.params.closeBtns.join(',');
+				if (e.target.closest(allBtns)) {
+					this.closeMenu(menu);
+					return;
+				}
+			}
+
+			if (!isInsideMenu && !isBtn && menu.classList.contains(this.params.activeClass)) {
+				this.closeMenu(menu);
+			}
+		});
 	}
 }

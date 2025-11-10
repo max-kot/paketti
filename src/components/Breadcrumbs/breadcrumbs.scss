@@ -1,0 +1,18 @@
+@use "@/scss/tools" as *;
+
+.breadcrumbs {
+	a {
+		display: inline-flex;
+		text-decoration: none;
+		color: inherit;
+		transition: color 0.3s;
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+
+	span {
+		display: inline-flex;
+		padding-inline: 5px;
+	}
+}

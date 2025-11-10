@@ -4,11 +4,21 @@ import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import { Menu } from "./modules/Menu";
 import { AutoCalc } from "./modules/AutoCalc";
 import { CustomSelect } from "./modules/CustomSelect";
-import { ListHider } from "./modules/ListHider";
+//import { ListHider } from "./modules/ListHider";
+import { ExcerptBox } from "./modules/ExcerptBox";
 import { cookies } from "./modules/Cookies";
 import { ScrollToTop } from "./modules/ScrollToTop";
+import { ResetInput } from "./modules/ResetInput";
+import $ from "jquery";
+import "ion-rangeslider";
+import "ion-rangeslider/css/ion.rangeSlider.min.css";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 //import { jarallax } from "jarallax";
 //import 'jarallax/dist/jarallax.min.css';
+Fancybox.bind("[data-fancybox]", {});
+
 
 new AutoCalc();
 new Menu({
@@ -21,6 +31,11 @@ new Menu({
 	btn: '[data-add-menu-btn]',
 	closeBtns: ['[data-mega-menu-btn]'],
 	activeClass: 'add-menu-open',
+});
+new Menu({
+	menu: '[data-filter-box]',
+	btn: '[data-filter-box-btn]',
+	activeClass: 'filter-open',
 });
 document.querySelectorAll('[data-sub-menu-btn')?.forEach(btn => {
 	const id = btn.getAttribute('data-sub-menu-btn');
@@ -62,15 +77,17 @@ new Swiper('.auto-slider', {
 	}
 })
 
-new ListHider('[data-list-hider]', {
-	skipElements: 1,
-	button: {
-		openText: 'Показать больше',
-		closeText: 'Скрыть',
-	},
+
+new ExcerptBox({
+	selector: '[data-excerpt-media]',
+	btn: '[data-excerpt-media-btn]',
 	media: 'max-width: 768px',
-	offsetHeight: 0,
-})
+});
+new ExcerptBox({
+	selector: '[data-excerpt-filter-box]',
+	btn: '[data-excerpt-filter-btn]',
+	showChild: 4,
+});
 
 cookies();
 
@@ -79,3 +96,65 @@ new ScrollToTop()
 //jarallax(document.querySelectorAll('.jarallax'), {
 //	speed: 0.2,
 //});
+
+new ResetInput();
+
+
+$(function () {
+	const $range = $("[data-range-slider]");
+	const $inputFrom = $("[data-range-slider-input-from]");
+	const $inputTo = $("[data-range-slider-input-to]");
+	let instance;
+	const min = Number($("[data-range-slider-min]").attr("data-range-slider-min"));
+	const max = Number($("[data-range-slider-max]").attr("data-range-slider-max"));
+	let from = 0;
+	let to = 0;
+
+	$range.ionRangeSlider({
+		skin: "round",
+		type: "double",
+		min: min,
+		max: max,
+		onStart: updateInputs,
+		onChange: updateInputs
+	});
+	instance = $range.data("ionRangeSlider");
+
+	function updateInputs(data) {
+		from = data.from;
+		to = data.to;
+
+		$inputFrom.prop("value", from);
+		$inputTo.prop("value", to);
+	}
+
+	$inputFrom.on("input", function () {
+		var val = $(this).prop("value");
+
+		// validate
+		if (val < min) {
+			val = min;
+		} else if (val > to) {
+			val = to;
+		}
+
+		instance.update({
+			from: val
+		});
+	});
+
+	$inputTo.on("input", function () {
+		var val = $(this).prop("value");
+
+		// validate
+		if (val < from) {
+			val = from;
+		} else if (val > max) {
+			val = max;
+		}
+
+		instance.update({
+			to: val
+		});
+	});
+});

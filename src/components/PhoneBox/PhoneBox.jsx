@@ -20,11 +20,11 @@ export default ({ className, data }) => {
 				if (icon) {
 					iconType = `url("${icon}")`;
 				} else if (type === 'address') {
-					iconType = 'url("images/icons/pin.svg")'
+					iconType = 'url("../images/icons/pin.svg")'
 				} else if (type === 'email') {
-					iconType = 'url("images/icons/email.svg")'
+					iconType = 'url("../images/icons/email.svg")'
 				} else {
-					iconType = 'url("images/icons/phone.svg")'
+					iconType = 'url("../images/icons/phone.svg")'
 				}
 
 				return (

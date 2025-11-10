@@ -1,0 +1,68 @@
+@use "@/scss/tools" as *;
+
+.product-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: adapt(24, 14);
+	padding: 4px 14px;
+	
+	&__btn {
+		@include reset;
+		background: transparent;
+		border: none;
+		text-align: left;
+
+		text-decoration: none;
+		color: inherit;
+
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 14px;
+		font-weight: 600;
+		transition: all 0.3s;
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+
+	&__filter-btn {
+		@include media($tablet, min) {
+			display: none;
+		}
+	}
+	&__hit-btn {
+		margin-right: auto;
+	}
+	&__filter-sort {
+	}
+}
+
+.filter-sort {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 600;
+	span {
+		@include media($mobile-sm) {
+			display: none;
+		}
+	}
+	@include custom-select-styles;
+	.custom-select {
+		width: 180px;
+		@include media($mobile-sm) {
+			width: 150px;
+		}
+		&__list {
+			height: 220px;
+		}
+		&__select-field,
+		&__btn {
+			font-weight: 600;
+		}
+	}
+}
+.orderby {
+}

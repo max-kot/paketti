@@ -2,6 +2,7 @@
 
 .scroll-to-top {
 	position: fixed;
+	z-index: 2;
 	bottom: calc(var(--nav-bar-height) + 10px);
 	right: container-padding(1360px);
 	flex-shrink: 0;

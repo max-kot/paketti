@@ -1,0 +1,64 @@
+@use "@/scss/tools" as *;
+
+.woocommerce-pagination {
+}
+._pagination-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include square(adapt(36, 34));
+	padding: 8px;
+	background: var(--color-gray-5);
+	border-radius: 6px;
+}
+.pagination {
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	ul {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		gap: adapt(10, 4);
+	}
+	a.page-numbers {
+		text-decoration: none;
+		color: inherit;
+
+		@extend ._pagination-item;
+		transition: all 0.3s;
+
+		@include hover {
+			background: var(--color-accent);
+			color: var(--color-white);
+		}
+	}
+
+	.dots {
+		@extend ._pagination-item;
+	}
+	.current {
+		@extend ._pagination-item;
+		background: var(--color-accent);
+		color: var(--color-white);
+	}
+	a.next,
+	a.prev {
+		background: transparent;
+		color: var(--color-accent);
+	}
+	a.next {
+		@include hover {
+			background: transparent;
+			color: var(--color-accent);
+			transform: translateX(4px);
+		}
+	}
+	a.prev {
+		@include hover {
+			background: transparent;
+			color: var(--color-accent);
+			transform: translateX(-4px);
+		}
+	}
+}

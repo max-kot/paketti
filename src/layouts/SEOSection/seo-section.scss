@@ -11,6 +11,7 @@
 
 		&__descr {
 			@include reset-child;
+			font-size: 14px;
 		}
 
 		&__btn {
@@ -20,10 +21,6 @@
 			background: transparent;
 			text-decoration: underline;
 			color: var(--color-blue);
-
-			&.list-hider-btn-hidden {
-				display: none;
-			}
 
 			@include media($mobile, min) {
 				display: none;

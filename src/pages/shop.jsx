@@ -1,59 +1,19 @@
-import Benefits from "./Benefits/Benefits"
-import Header from "./Header/Header"
-import Hero from "./Hero/Hero"
-import Catalog from "./Catalog/Catalog"
-import Popular from "./Popular/Popular"
-import SliderSection from "./SliderSection/SliderSection"
-import ContactSection from "./ContactSection/ContactSection"
-import SEOSection from "./SEOSection/SEOSection"
-import Footer from "./Footer/Footer"
+import FiltersBlock from "@/components/FiltersBlock/FiltersBlock"
+import Pagination from "@/components/Pagination/Pagination"
+import ProductBar from "@/components/ProductBar/ProductBar"
+import ProductCard from "@/components/ProductCard/ProductCard"
+import ContactSection from "@/layouts/ContactSection/ContactSection"
+import Footer from "@/layouts/Footer/Footer"
+import Header from "@/layouts/Header/Header"
+import HeroPage from "@/layouts/HeroPage/HeroPage"
+import SEOSection from "@/layouts/SEOSection/SEOSection"
 
-const partners = [
-	{
-		image: "images/partner-1.png",
-		text: "",
-	},
-	{
-		image: "images/partner-2.png",
-		text: "",
-	},
-	{
-		image: "images/partner-3.png",
-		text: "",
-	},
-	{
-		image: "images/partner-4.png",
-		text: "",
-	},
-	{
-		image: "images/partner-5.png",
-		text: "",
-	},
-	{
-		image: "images/partner-6.png",
-		text: "",
-	},
-	{
-		image: "images/partner-2.png",
-		text: "",
-	},
-	{
-		image: "images/partner-3.png",
-		text: "",
-	},
-	{
-		image: "images/partner-4.png",
-		text: "",
-	},
-	{
-		image: "images/partner-5.png",
-		text: "",
-	},
-	{
-		image: "images/partner-6.png",
-		text: "",
-	},
-];
+
+export const metadata = {
+	title: 'Каталог - Пакетти',
+	lang: 'ru',
+}
+
 const products = [
 	{
 		"link": "#",
@@ -149,19 +109,38 @@ const products = [
 		},
 		"hasAccount": true,
 	},
+	{
+		"link": "#",
+		"image": "images/product-1.jpg",
+		"title": "Соломка для напитков",
+		"hasLabel": true,
+		"sku": "123456",
+		"price": {
+			"priceTax": "1030",
+			"oldPriceTax": "1040",
+			"price": "1010",
+			"oldPrice": "1020"
+		},
+		"hasAccount": true,
+	},
 ];
-export default ({ data, lang }) => {
+
+export default () => {
 	return (
 		<>
 			<Header />
 			<main className="main">
-				<Hero />
-				<Benefits />
-				<Catalog />
-				<Popular products={products} title="Популярные товары"/>
-				<SliderSection className="partners" title="Наши партнеры" data={partners} />
-				<ContactSection/>
-				<SEOSection/>
+				<HeroPage title="Одноразовая посуда и аксессуары" breadcrumbs={['Главная', 'Каталог', 'Одноразовая посуда и аксессуары']} />
+				<div className="container product-section">
+					<FiltersBlock className="product-section__filters" />
+					<ProductBar className="product-section__product-bar"/>
+					<ul className="product-section__product-grid grid grid-4">
+						{products.map((product) => <ProductCard data={product} />)}
+					</ul>
+					<Pagination />
+				</div>
+				<ContactSection />
+				<SEOSection />
 			</main>
 			<Footer />
 		</>

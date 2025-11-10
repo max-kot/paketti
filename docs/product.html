@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пакетти - Оптовая продажа товаров бытового назначения</title>
+    <title>Соломка для напитков - Пакетти</title>
     <script src="assets/main.js" type="module"></script>
     <link rel="stylesheet" href="assets/bundle.css">
   </head>
@@ -299,195 +299,78 @@
         </nav>
       </header>
       <main class="main">
-        <section class="section hero" id="hero">
-          <div class="container hero__container">
-            <div class="hero__content">
-              <h2 class="title hero__title">Ваш бизнес начинается с надежной упаковки</h2>
-              <ul class="hero__list">
-                <li class="hero__item">Более 15 лет поставляем качественную упаковку для тысяч компаний по всей стране</li>
-                <li class="hero__item">Быстрые поставки, выгодные цены и персональный подход</li>
-              </ul>
-              <a class="btn hero__btn btn--big" href="#"><span>Перейти в каталог</span></a>
+        <section class="section hero-page" id="hero-page">
+          <div class="container hero-page__container">
+            <nav class="breadcrumbs">
+              <a href="#">Главная</a><span>»</span>
+              <a href="#">Каталог</a><span>»</span>
+              <a href="#">Одноразовая посуда и аксессуары</a><span>»</span>Соломка для напитков
+            </nav>
+            <h1 class="title-2 hero-page__title">Соломка для напитков</h1>
+          </div>
+        </section>
+        <div class="product container section">
+          <div class="product__summary product-summary">
+            <a class="product-summary__image image-box" href="images/product-1.jpg" data-fancybox="true">
+              <img src="images/product-1.jpg" alt="Соломка для напитков"><span class="product-summary__flash hit-flash">Хит</span>
+            </a>
+            <div class="product-summary__content">
+              <p class="product-summary__sku">Арт. 123456789</p>
+              <div class="product-summary__spec-box">
+                <h3 class="product-summary__title title-3">Характеристики</h3>
+                <ul class="product-summary__spec spec">
+                  <li class="spec__item"><span class="spec__name">Количество в коробке, шт.</span><span class="spec__value">1000</span></li>
+                  <li class="spec__item"><span class="spec__name">Цена указана</span><span class="spec__value">без НДС</span></li>
+                  <li class="spec__item"><span class="spec__name">Производитель</span><span class="spec__value">ООО &quot;МИСТЕРИЯ&quot;</span></li>
+                  <li class="spec__item"><span class="spec__name">Импортёр</span><span class="spec__value">ООО &quot;ПСПфабрик&quot;</span></li>
+                  <li class="spec__item"><span class="spec__name">Тип</span><span class="spec__value">Гофрированные</span></li>
+                  <li class="spec__item"><span class="spec__name">Цвет</span><span class="spec__value">Ассорти</span></li>
+                  <li class="spec__item"><span class="spec__name">Размер</span><span class="spec__value">5 мм</span></li>
+                </ul>
+              </div>
+              <div class="product-summary__order-box order-box box">
+                <div class="order-box__info">Поставляется партиями кратно 25 шт<br> блок: 25 шт, коробка: 2500 шт</div>
+                <div class="price-box order-box__price-box">
+                  <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
+                  <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
+                </div>
+                <div class="order-box__cart-btn-box">
+                  <form class="order-box__form">
+                    <div class="order-box__input-box">
+                      <input type="number" min="25" step="25" value="25">
+                      <select>
+                        <option value="pcs" selected="">шт</option>
+                        <option value="block">блк</option>
+                        <option value="boxes">кор</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="order-box__cart-btn btn">В корзину</button>
+                  </form>
+                  <a class="order-box__fav-btn fav-btn" href="#">
+                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <figure class="image-box hero__image-box">
-            <img class="bg-full" src="images/hero.jpg" alt="Ваш бизнес начинается с надежной упаковки">
-            <img class="bg-mobile" src="images/hero-mobile.jpg" alt="Ваш бизнес начинается с надежной упаковки">
-          </figure>
-        </section>
-        <section class="section benefits" id="benefits">
-          <div class="container benefits__container">
-            <h2 class="visually-hidden">Преимущества</h2>
-            <ul class="benefits__list">
-              <li class="benefits__item benefit-item">
-                <figure class="benefit-item__icon">
-                  <img src="images/benefit-1.svg" alt="Большой ассортимент и выбор товаров">
-                </figure>
-                <p class="benefit-item__text">Большой ассортимент и выбор товаров</p>
-              </li>
-              <li class="benefits__item benefit-item">
-                <figure class="benefit-item__icon">
-                  <img src="images/benefit-2.svg" alt="Гибкая система оплаты, отсрочка платежа">
-                </figure>
-                <p class="benefit-item__text">Гибкая система оплаты, отсрочка платежа</p>
-              </li>
-              <li class="benefits__item benefit-item">
-                <figure class="benefit-item__icon">
-                  <img src="images/benefit-3.svg" alt="Работаем напрямую с  производителями">
-                </figure>
-                <p class="benefit-item__text">Работаем напрямую с производителями</p>
-              </li>
-              <li class="benefits__item benefit-item">
-                <figure class="benefit-item__icon">
-                  <img src="images/benefit-4.svg" alt="Гарантия на все товары">
-                </figure>
-                <p class="benefit-item__text">Гарантия на все товары</p>
-              </li>
-              <li class="benefits__item benefit-item">
-                <figure class="benefit-item__icon">
-                  <img src="images/benefit-5.svg" alt="Доставляем товар по всей Республике">
-                </figure>
-                <p class="benefit-item__text">Доставляем товар по всей Республике</p>
-              </li>
-              <li class="benefits__item benefit-item">
-                <figure class="benefit-item__icon">
-                  <img src="images/benefit-6.svg" alt="Предлагаем только качественные товары">
-                </figure>
-                <p class="benefit-item__text">Предлагаем только качественные товары</p>
-              </li>
-            </ul>
+          <div class="box product__details product-details">
+            <h3 class="product-details__title title-3">Описание товара</h3>
+            <div class="product-details__descr">
+              <p>Идеальны как для прохладительных напитков, так и для густых коктейлей. Качественное сырье обеспечивает безопасность при контакте с пищевыми продуктами. Подойдут как для предприятий общественного питания, так и для домашнего использования.</p>
+              <p>Размеры: 240 х 8 мм.</p>
+              <p>Количество в упаковке: 250 шт.</p>
+              <p>Количество в коробке: 20 упак.</p>
+              <p>Внешний вид товара, включая цвет, могут незначительно отличаться от представленных на фотографии.</p>
+              <p>Страна-производитель: Беларусь.</p>
+              <p>Изготовитель: ООО &quot;Эксталайн&quot;, РБ, г. Могилев.</p>
+            </div>
           </div>
-        </section>
-        <section class="section catalog" id="catalog">
-          <div class="container catalog__container">
-            <h2 class="catalog__title title-2">Каталог продукции</h2>
-            <ul class="catalog__list grid grid-4">
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-1.png" alt="Последняя цена">
-                  </figure>
-                  <h3 class="catalog-item__text">Последняя цена</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-2.png" alt="Сезонные предложения">
-                  </figure>
-                  <h3 class="catalog-item__text">Сезонные предложения</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-3.png" alt="Одноразовая посуда и аксессуары">
-                  </figure>
-                  <h3 class="catalog-item__text">Одноразовая посуда и аксессуары</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-4.png" alt="Кондитерская упаковка">
-                  </figure>
-                  <h3 class="catalog-item__text">Кондитерская упаковка</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-5.png" alt="Упаковка для фастфуда">
-                  </figure>
-                  <h3 class="catalog-item__text">Упаковка для фастфуда</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-6.png" alt="Барные аксессуары">
-                  </figure>
-                  <h3 class="catalog-item__text">Барные аксессуары</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-7.png" alt="Пакеты">
-                  </figure>
-                  <h3 class="catalog-item__text">Пакеты</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-8.png" alt="Гигиеническая продукция">
-                  </figure>
-                  <h3 class="catalog-item__text">Гигиеническая продукция</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-9.png" alt="Бытовая химия">
-                  </figure>
-                  <h3 class="catalog-item__text">Бытовая химия</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-10.png" alt="Хозяйственные губки, салфетки">
-                  </figure>
-                  <h3 class="catalog-item__text">Хозяйственные губки, салфетки</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-11.png" alt="Средства индивидуальной защиты">
-                  </figure>
-                  <h3 class="catalog-item__text">Средства индивидуальной защиты</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-12.png" alt="Инвентарь для уборки">
-                  </figure>
-                  <h3 class="catalog-item__text">Инвентарь для уборки</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-13.png" alt="Упаковочные материалы">
-                  </figure>
-                  <h3 class="catalog-item__text">Упаковочные материалы</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-14.png" alt="Чековая лента и маркировочная продукция">
-                  </figure>
-                  <h3 class="catalog-item__text">Чековая лента и маркировочная продукция</h3>
-                </a>
-              </li>
-              <li class="catalog-item">
-                <a class="catalog-item__link" href="#">
-                  <figure class="catalog-item__image">
-                    <img src="images/catalog-15.png" alt="Канцелярия">
-                  </figure>
-                  <h3 class="catalog-item__text">Канцелярия</h3>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="section popular" id="popular">
-          <div class="container popular__container">
-            <h2 class="title-2 popular__title">Популярные товары</h2>
+        </div>
+        <section class="section popular recent-products" id="popular recent-products">
+          <div class="container popular recent-products__container">
+            <h2 class="title-2 popular__title">Недавно просмотренные товары</h2>
             <ul class="popular__list grid grid-4">
               <li class="product-card">
                 <div class="product-card__image-box">
@@ -523,40 +406,13 @@
                   </form>
                 </div>
               </li>
-              <li class="product-card product-card--no-account">
-                <div class="product-card__image-box">
-                  <a class="product-card__image-link" href="#">
-                    <img src="images/product-2.jpg" alt="Одноразовая посуда и аксессуары">
-                  </a>
-                  <a class="product-card__fav-btn fav-btn" href="#">
-                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
-                    </svg>
-                  </a>
-                </div>
-                <a class="product-card__content-link" href="#">
-                  <h3 class="title-3 product-card__title">Одноразовая посуда и аксессуары</h3>
-                  <p class="product-card__sku">Код товара: <span>789456</span></p>
-                  <div class="price-box product-card__price-box">
-                    <div class="price-box__price-box"><span class="price-box__price">1050<span>р/шт</span></span><span class="price-box__text">с НДС</span></div>
-                    <div class="price-box__price-box"><span class="price-box__price">1040<span>р/шт</span></span><span class="price-box__text">без НДС</span></div>
-                  </div>
-                  <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
-                </a>
-                <div class="product-card__cart-btn-box">
-                  <form class="product-card__form">
-                    <div class="product-card__input-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                    <button type="submit" class="product-card__cart-btn btn">В корзину</button>
-                  </form>
-                </div>
-              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section popular similar-products" id="popular similar-products">
+          <div class="container popular similar-products__container">
+            <h2 class="title-2 popular__title">Похожие товары</h2>
+            <ul class="popular__list grid grid-4">
               <li class="product-card">
                 <div class="product-card__image-box">
                   <a class="product-card__image-link" href="#">
@@ -676,40 +532,6 @@
                   <div class="price-box product-card__price-box">
                     <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
                     <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                  </div>
-                  <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
-                </a>
-                <div class="product-card__cart-btn-box">
-                  <form class="product-card__form">
-                    <div class="product-card__input-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                    <button type="submit" class="product-card__cart-btn btn">В корзину</button>
-                  </form>
-                </div>
-              </li>
-              <li class="product-card">
-                <div class="product-card__image-box">
-                  <a class="product-card__image-link" href="#">
-                    <img src="images/product-2.jpg" alt="Соломка для напитков"><span class="product-card__flash hit-flash">Хит</span>
-                  </a>
-                  <a class="product-card__fav-btn fav-btn" href="#">
-                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
-                    </svg>
-                  </a>
-                </div>
-                <a class="product-card__content-link" href="#">
-                  <h3 class="title-3 product-card__title">Соломка для напитков</h3>
-                  <p class="product-card__sku">Код товара: <span>123456</span></p>
-                  <div class="price-box product-card__price-box">
-                    <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><span class="price-box__text">с НДС</span></div>
-                    <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><span class="price-box__text">без НДС</span></div>
                   </div>
                   <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
                 </a>
@@ -728,104 +550,6 @@
                 </div>
               </li>
             </ul>
-          </div>
-        </section>
-        <section class="section slider-section partners" id="slider-section">
-          <div class="container slider-section__container container--wide">
-            <h2 class="title-2 slider-section__title">Наши партнеры</h2>
-            <div class="slider-section__slider-box">
-              <div class="swiper auto-slider slider-section__auto-slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-1.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-2.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-3.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-4.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-5.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-6.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-2.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-3.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-4.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-5.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide auto-slider__slide">
-                    <div class="slider-section__slide-wrapper">
-                      <div class="slider-section__image">
-                        <img src="images/partner-6.png" alt>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="auto-slider__btn auto-slider__btn-prev slider-section__btn-prev" type="button" aria-label="Назад">
-                <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.253178 12.6586L10.5303 23.7286C10.867 24.0911 11.4122 24.0905 11.7483 23.7267C12.0842 23.3631 12.0833 22.7739 11.7466 22.4111L2.08118 12L11.7469 1.58889C12.0836 1.22605 12.0845 0.637266 11.7486 0.273513C11.5801 0.0911567 11.3594 0 11.1386 0C10.9184 0 10.6985 0.0905461 10.5303 0.271637L0.253178 11.3414C0.0910174 11.5156 0 11.7529 0 12C0 12.2471 0.0912598 12.484 0.253178 12.6586Z" fill="currentColor"></path>
-                </svg>
-              </button>
-              <button class="auto-slider__btn slider-section__btn auto-slider__btn-next slider-section__btn-next" type="button" aria-label="Вперёд">
-                <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.7468 11.3414L1.4697 0.271403C1.13298 -0.0910845 0.58784 -0.0904761 0.251681 0.273278C-0.0841931 0.636943 -0.0833472 1.22612 0.253417 1.58891L9.91882 12L0.253095 22.4111C-0.0836285 22.7739 -0.0845193 23.3627 0.251356 23.7265C0.419859 23.9088 0.640599 24 0.861379 24C1.08155 24 1.30148 23.9095 1.46966 23.7284L11.7468 12.6586C11.909 12.4844 12 12.2471 12 12C12 11.7529 11.9087 11.516 11.7468 11.3414Z" fill="currentColor"></path>
-                </svg>
-              </button>
-            </div>
           </div>
         </section>
         <section class="section contact-section" id="contact-section">
@@ -856,19 +580,6 @@
             </div>
           </div>
         </section>
-        <div class="section seo-section" id="seo-section">
-          <div class="container seo-section__container">
-            <div class="seo-section__wrapper" data-list-hider="true">
-              <div class="seo-section__descr" data-excerpt-media="true" data-excerpt-box="seo-1">
-                <p>Компания «ПАКЕТТИ» занимается в Беларуси. Если Вы хотите купить одноразовую посуду, полиэтиленовые пакеты, бытовую химию, перчатки, салфетки, туалетную бумагу и многие другие изделия – Вас заинтересуют предложения «ПАКЕТТИ». Мы плодотворно сотрудничаем со многими торговыми компаниями, представителями ресторанного и гостиничного бизнеса и предлагаем нашим партнерам особый подход к их нуждам: у нас Вы можете рассчитывать не только на приобретение качественной и экологически чистой продукции, но и на удобные формы оплаты, гибкое ценообразование и отсрочки платежей по мере необходимости, не говоря уже о доставке купленной Вами продукции.</p>
-                <p>Широчайший ассортимент пластиковой одноразовой посуды и товаров народного потребления, предлагаемый нашей компанией, может удовлетворить самые требовательные запросы. У нас вы можете приобрести одноразовые стаканчики, пластиковые пищевые контейнеры, бумажные полотенца, а также купить хозтовары (губки, мешки для мусора, салфетки губчатые, полимерную пленку) и предметы бытовой химии — чистящие порошки, санитарно-гигиенические средства, средства для мытья посуды, стекол. Что бы Вам ни было нужно, вы встретите индивидуальный подход и горячее внимание к Вашим пожеланиям. Качественное обслуживание и удовлетворение клиента – важнейшие программные составляющие политики нашей компании.</p>
-                <p>Компания «ПАКЕТТИ» обеспечит всем необходимым и представителей торговли: у нас вы можете купить чековую ленту, этикет-ленту (разных расцветок), этикет-пистолет, а также бумагу для печатающих устройств.</p>
-                <p>Представителей бизнеса особо может заинтересовать принятая в компании «ПАКЕТТИ» система скидок, дающая не только возможность единовременной экономии, но и предполагающая ощутимую выгоду в случае долговременного сотрудничества. Мы рады каждому клиенту, и наше открытое и внимательное отношение к Вам не зависит от объемов закупок. Поэтому среди клиентов компании много и небольших кофейных заведений, и крупных региональных дилеров с разветвленными торговыми сетями.</p>
-              </div>
-              <button class="seo-section__btn" data-excerpt-btn="seo-1" data-excerpt-media-btn="true" data-excerpt-btn-close="Свернуть">Читать дальше</button>
-            </div>
-          </div>
-        </div>
       </main>
       <footer class="footer">
         <div class="container footer__container">

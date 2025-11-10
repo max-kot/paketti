@@ -1,175 +1,14 @@
 @use "@/scss/tools" as *;
-//.footer {
-//	padding-block: 48px 58px;
-//	background: var(--color-footer-bg);
-//	color: var(--color-footer-text);
-//	font-size: rem(14);
 
-//	&__container {
-//		display: grid;
-//		grid-template-columns: 1fr rem(400) 1fr;
-//		gap: adapt(40, 24) adapt(120, 40, $tablet);
-
-//		@include media($tablet) {
-//			grid-template-columns: repeat(2, 1fr);
-//		}
-//		@include media($mobile) {
-//			grid-template-columns: 1fr;
-//		}
-//	}
-
-//	&__info {
-//		display: grid;
-//		gap: rem(36);
-//		@include media($tablet) {
-//			grid-column: 1 / -1;
-//		}
-//		.flex-box {
-//			display: flex;
-//			align-items: flex-end;
-//			gap: rem(14);
-//		}
-//	}
-
-//	&__logo {
-//		flex-shrink: 0;
-//	}
-
-//	&__info-descr {
-//		@include reset-child;
-//	}
-
-//	&__small-copy {
-//		font-size: inherit;
-//	}
-
-//	&__links-box {
-//		display: grid;
-//		gap: rem(14);
-//	}
-//	&__link {
-//		text-decoration: none;
-//		color: inherit;
-//		transition: color 0.3s;
-
-//		@include hover {
-//			color: var(--color-footer-hover);
-//		}
-//	}
-
-//	&__nav {
-//		font-size: rem(18);
-//	}
-
-//	&__title {
-//		@include reset;
-//		font-size: rem(18);
-//		font-weight: 700;
-//		color: var(--color-accent);
-
-//		&:not(:last-child) {
-//			margin-bottom: adapt(24, 16);
-//		}
-//	}
-
-//	&__contacts {
-//		font-size: rem(16);
-//		justify-self: end;
-//		text-align: right;
-
-//		@include media($mobile) {
-//			justify-self: initial;
-//			text-align: left;
-//		}
-//	}
-
-//	&__phone-box {
-//		@include media($tablet) {
-//			border: none;
-//			padding-bottom: unset;
-//		}
-//		&:not(:last-child) {
-//			margin-bottom: rem(14);
-//		}
-//		.phone-box__item {
-//			justify-content: flex-end;
-
-//			@include media($mobile) {
-//				justify-content: flex-start;
-//			}
-//		}
-//		.phone-box__link {
-//			font-weight: 400;
-//			@include hover {
-//				color: var(--color-footer-hover);
-//			}
-//		}
-//	}
-
-//	&__address {
-//		font-style: normal;
-//	}
-
-//	&__block {
-//		grid-column: 1 / -1;
-//		display: flex;
-//		align-items: center;
-//		justify-content: space-between;
-//		gap: adapt(42, 24);
-//		padding-top: 16px;
-//		border-top: 1px solid var(--color-border);
-
-//		@include media($mobile) {
-//			flex-direction: column;
-//			justify-content: flex-start;
-//			align-items: flex-start;
-//		}
-//	}
-
-//	&__col {
-//		@include reset-child;
-//		&:last-child {
-//			text-align: right;
-
-//			@include media($mobile) {
-//				text-align: left;
-//			}
-//		}
-//	}
-
-//	&__pay-methods {
-//		flex-shrink: 0;
-//	}
-//}
-
-//.menu {
-//	&__list {
-//		@include reset;
-//		list-style-type: none;
-//		display: grid;
-//		grid-template-columns: repeat(2, 1fr);
-//		gap: rem(14) adapt(100, 24, $tablet);
-//	}
-
-//	&__item {
-//	}
-
-//	&__link {
-//		text-decoration: none;
-//		color: inherit;
-//		transition: color 0.3s;
-
-//		@include hover {
-//			color: var(--color-footer-hover);
-//		}
-//	}
-//}
-//===================
 .footer {
-	padding-block: 44px var(--nav-bar-height);
+	padding-top: 44px;
+	padding-bottom: calc(var(--nav-bar-height) + 70px);
 	background: var(--color-footer);
 	color: var(--color-footer-text);
 	font-size: 14px;
+	@include media($tablet) {
+		padding-bottom: var(--nav-bar-height);
+	}
 	&__container {
 	}
 
@@ -299,7 +138,7 @@
 	margin-top: 16px;
 	padding-top: 16px;
 	border-top: 1px solid var(--color-gray-6);
-
+	font-size: 12px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;

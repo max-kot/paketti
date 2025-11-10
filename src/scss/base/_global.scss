@@ -56,6 +56,10 @@ body {
 	padding-block: var(--section-padding);
 }
 
+main > *:last-child {
+	padding-bottom: adapt(112, 56);
+}
+
 .logo {
 	transition: all 0.3s;
 	a {
@@ -66,5 +70,60 @@ body {
 	}
 	@include hover {
 		opacity: 0.7;
+	}
+}
+
+// Product section
+.product-section {
+	display: grid;
+	grid-template-columns: 282px 1fr;
+	gap: 24px;
+	position: relative;
+
+	@include media($tablet) {
+		grid-template-columns: 1fr;
+	}
+	&__filters {
+		grid-column: 1;
+		grid-row: span 2;
+		align-self: start;
+
+		@include media($tablet) {
+			position: absolute;
+			top: var(--product-bar-height);
+			left: 0;
+			z-index: 10;
+			max-width: 282px;
+			background: var(--color-white);
+			transform: translateX(-100%);
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all 0.3s;
+
+			.filter-open & {
+				transform: translateX(0);
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	&__product-bar {
+		grid-column: 2;
+		@include media($tablet) {
+			grid-column: 1;
+		}
+	}
+
+	&__product-grid {
+		grid-column: 2;
+		@include media($tablet) {
+			grid-column: 1;
+		}
+	}
+	.pagination {
+		grid-column: 1 / -1;
 	}
 }

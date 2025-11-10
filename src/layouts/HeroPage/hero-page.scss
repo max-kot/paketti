@@ -1,0 +1,17 @@
+@use "@/scss/tools" as *;
+
+.hero-page {
+	padding-top: adapt(10, 24);
+	padding-bottom: 32px;
+
+	&__container {
+		display: grid;
+		gap: adapt(56, 32)
+	}
+	.breadcrumbs {
+		color: var(--color-gray-7);
+	}
+	&__title {
+		margin-bottom: unset;
+	}
+}
