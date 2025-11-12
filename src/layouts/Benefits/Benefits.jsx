@@ -28,10 +28,11 @@ const benefits = [
 	},
 ]
 
-export default () => {
+export default ({ title }) => {
 	return (
 		<Section className="benefits">
-			<h2 className="visually-hidden">Преимущества</h2>
+			{!title && <h2 className="visually-hidden">Преимущества</h2>}
+			{title && <h2 className="benefits__title title-2">{title}</h2>}
 			<ul className="benefits__list">
 				{benefits?.map(({ icon, text }) => (
 					<li className="benefits__item benefit-item" key={text}>

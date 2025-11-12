@@ -12,6 +12,8 @@ import { ExcerptBox } from "./modules/ExcerptBox";
 import { cookies } from "./modules/Cookies";
 import { ScrollToTop } from "./modules/ScrollToTop";
 import { ResetInput } from "./modules/ResetInput";
+import { Spoiler } from "./modules/Spoiler";
+import { PasswordShow } from "./modules/PasswordShow";
 
 
 //import { jarallax } from "jarallax";
@@ -36,6 +38,7 @@ new Menu({
 	btn: '[data-filter-box-btn]',
 	activeClass: 'filter-open',
 });
+
 document.querySelectorAll('[data-sub-menu-btn')?.forEach(btn => {
 	const id = btn.getAttribute('data-sub-menu-btn');
 
@@ -48,6 +51,7 @@ document.querySelectorAll('[data-sub-menu-btn')?.forEach(btn => {
 	});
 
 })
+
 
 new CustomSelect({
 	selector: 'select'
@@ -156,3 +160,10 @@ $(function () {
 		});
 	});
 });
+
+new Spoiler('[data-spoiler-delivery]', {
+	onlyOneOpen: true,
+	createButton: false,
+});
+
+new PasswordShow();

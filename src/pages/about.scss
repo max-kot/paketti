@@ -1,0 +1,18 @@
+@use "@/scss/tools" as *;
+.about {
+	padding-top: unset;
+}
+.wp-block-media-text {
+	display: grid;
+	grid-template-columns: auto 40%;
+	@include media($mobile) {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		justify-items: center;
+	}
+	&__content {
+	}
+
+	&__media {
+	}
+}

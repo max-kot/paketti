@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ru" class="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Пакетти</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="assets/bundle.css">
+  </head>
+  <body>
+    <div class="wrapper" lang="ru">
+      <header class="section header" id="header" data-auto-calc="header, height">
+        <div class="container">
+          <div class="header__top" data-add-menu="true">
+            <nav class="header-menu header__menu">
+              <ul class="header-menu__list">
+                <li>
+                  <a href="#">О компании</a>
+                </li>
+                <li>
+                  <a href="#">Навiны</a>
+                </li>
+                <li>
+                  <a href="#">Вопрос-ответ</a>
+                </li>
+                <li>
+                  <a href="#">Возврат и обмен</a>
+                </li>
+                <li>
+                  <a href="#">Оплата и доставка</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="phone-box header__phone-box">
+              <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/phone.svg&quot;)">
+                <a class="phone-box__link" href="tel:+375222637171" target="_blank" rel="noreferrer">+375 222 63-71-71</a>
+              </li>
+              <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/phone.svg&quot;)">
+                <a class="phone-box__link" href="tel:+375293955171" target="_blank" rel="noreferrer">+375 29 395-51-71</a>
+                <a class="phone-box__icon-link" href="tel:+375293955171" aria-label="Перейти в Вайбер">
+                  <img src="images/icons/viber.svg" alt="Вайбер">
+                </a>
+                <a class="phone-box__icon-link" href="tel:+375293955171" aria-label="Перейти в Телеграм">
+                  <img src="images/icons/tg.svg" alt="Телеграм">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__bottom">
+            <div class="logo header__logo">
+              <a href="#">
+                <img src="images/logo.png" alt="Logo">
+              </a>
+            </div>
+            <button class="catalog-btn header__catalog-btn" data-mega-menu-btn="true"><span class="catalog-btn__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 6H22M2 12H22M2 18H22" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"></path>
+                </svg>
+              </span><span class="catalog-btn__text">Каталог</span></button>
+            <div class="header__search-form">
+              <form action="">
+                <input type="text" placeholder="Поиск по товарам">
+                <button aria-label="Искать">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 18.954L14.4133 13.3673C15.7558 11.7556 16.4253 9.68835 16.2825 7.59562C16.1396 5.50288 15.1954 3.54579 13.6464 2.13146C12.0973 0.717125 10.0626 -0.0455437 7.96554 0.00210549C5.86847 0.0497547 3.87051 0.904053 2.38728 2.38728C0.904053 3.87051 0.0497547 5.86847 0.00210549 7.96554C-0.0455437 10.0626 0.717125 12.0973 2.13146 13.6464C3.54579 15.1954 5.50288 16.1396 7.59562 16.2825C9.68835 16.4253 11.7556 15.7558 13.3673 14.4133L18.954 20L20 18.954ZM1.50598 8.16382C1.50598 6.84703 1.89645 5.5598 2.62803 4.46492C3.3596 3.37004 4.39941 2.51669 5.61598 2.01277C6.83254 1.50886 8.17121 1.37701 9.46271 1.6339C10.7542 1.8908 11.9405 2.5249 12.8716 3.45601C13.8028 4.38713 14.4369 5.57345 14.6937 6.86494C14.9506 8.15644 14.8188 9.49511 14.3149 10.7117C13.811 11.9282 12.9576 12.9681 11.8627 13.6996C10.7678 14.4312 9.48062 14.8217 8.16382 14.8217C6.39865 14.8197 4.70634 14.1176 3.45818 12.8695C2.21001 11.6213 1.50793 9.92899 1.50598 8.16382Z" fill="currentColor"></path>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <nav class="nav-bar header__nav-bar" data-auto-calc="nav-bar, height">
+              <ul class="nav-bar__list">
+                <li class="nav-bar__item home">
+                  <a class="nav-bar__link" href="#"><span class="nav-bar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_113_5635)">
+                          <path d="M22.9092 10.5689C22.9085 10.5685 22.908 10.5678 22.9075 10.5673L13.9323 1.5934C13.5498 1.21063 13.0411 1 12.5001 1C11.9591 1 11.4505 1.21063 11.0678 1.59336L2.09725 10.5627C2.09424 10.5657 2.09106 10.5689 2.08823 10.5719C1.30259 11.362 1.30397 12.6438 2.0921 13.4318C2.45212 13.7921 2.92749 14.0005 3.43599 14.0225C3.45679 14.0245 3.47763 14.0255 3.4986 14.0255H3.85614V20.6296C3.85614 21.9367 4.91973 23 6.22688 23H9.73825C10.0943 23 10.3829 22.7113 10.3829 22.3554V17.1777C10.3829 16.5814 10.8681 16.0963 11.4646 16.0963H13.5357C14.1321 16.0963 14.6172 16.5814 14.6172 17.1777V22.3555C14.6172 22.7113 14.9058 23 15.2618 23H18.7732C20.0805 23 21.1439 21.9367 21.1439 20.6297V14.0255H21.4756C22.0165 14.0255 22.5251 13.8149 22.908 13.432C23.697 12.6428 23.6973 11.3586 22.9092 10.5689L22.9092 10.5689ZM21.9963 12.5207C21.9281 12.5893 21.847 12.6437 21.7576 12.6807C21.6682 12.7178 21.5724 12.7367 21.4756 12.7365H20.4993C20.1432 12.7365 19.8547 13.025 19.8547 13.3811V20.6297C19.8547 21.2259 19.3696 21.7109 18.7731 21.7109H15.9064V17.1777C15.9064 15.8707 14.8429 14.8072 13.5356 14.8072H11.4646C10.1573 14.8072 9.0937 15.8707 9.0937 17.1777V21.7109H6.22697C5.63067 21.7109 5.14538 21.2258 5.14538 20.6297V13.381C5.14538 13.025 4.85681 12.7365 4.50078 12.7365H3.54123C3.53118 12.7358 3.5211 12.7353 3.51102 12.7351C3.31898 12.7318 3.13888 12.6556 3.00394 12.5204C2.71688 12.2334 2.71688 11.7663 3.00394 11.4791C3.00407 11.4791 3.00407 11.479 3.00424 11.4788L3.00476 11.4783L11.9796 2.50477C12.0477 2.43615 12.1289 2.38174 12.2182 2.34472C12.3076 2.30769 12.4034 2.28877 12.5001 2.28906C12.6967 2.28906 12.8815 2.36559 13.0207 2.50477L21.9935 11.4765L21.9977 11.4805C22.2832 11.7681 22.2827 12.2342 21.9963 12.5207Z" fill="currentColor" stroke="currentColor" stroke-width="0.1"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_113_5635">
+                            <rect width="24" height="24" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span><span class="nav-bar__text">Главная</span></a>
+                </li>
+                <li class="nav-bar__item shop">
+                  <a class="nav-bar__link" href="#" data-mega-menu-btn=""><span class="nav-bar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 6H22M2 12H22M2 18H22" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"></path>
+                      </svg>
+                    </span><span class="nav-bar__text">Каталог</span></a>
+                </li>
+                <li class="nav-bar__item cart">
+                  <a class="nav-bar__link" href="#"><span class="nav-bar__counter">99</span><span class="nav-bar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.0909 18.2C21.1453 18.2 22 19.0507 22 20.1C22 21.1493 21.1453 22 20.0909 22C19.0365 22 18.1818 21.1493 18.1818 20.1C18.1818 19.0507 19.0365 18.2 20.0909 18.2ZM20.0909 18.2H5.36554C5.22657 18.2 5.13416 18.0569 5.19186 17.9311L6.61172 14.835C6.6259 14.8041 6.63149 14.7699 6.6279 14.7361L5.39958 3.17003C5.38931 3.07336 5.30739 3 5.20973 3H1M21.8091 5.85H5.90656C5.78774 5.85 5.69513 5.95297 5.70767 6.07112L6.57311 14.2202C6.58544 14.3363 6.6941 14.4172 6.80882 14.3957L21.8443 11.5791C21.9346 11.5622 22 11.4837 22 11.3923V6.04C22 5.93507 21.9145 5.85 21.8091 5.85ZM4.81818 22C3.76382 22 2.90909 21.1493 2.90909 20.1C2.90909 19.0507 3.76382 18.2 4.81818 18.2C5.87254 18.2 6.72727 19.0507 6.72727 20.1C6.72727 21.1493 5.87254 22 4.81818 22Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </span><span class="nav-bar__text">Корзина</span></a>
+                </li>
+                <li class="nav-bar__item account">
+                  <a class="nav-bar__link" href="#"><span class="nav-bar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 14.6338C16.6951 14.6338 19.0967 15.9452 20.4521 17.3652C21.8334 18.8122 22.2002 20.4442 22.2002 21.167C22.2001 21.4924 22.1242 21.683 22.0518 21.7969C21.9772 21.914 21.875 21.9991 21.7539 22.0625C21.629 22.1279 21.4948 22.1646 21.3857 22.1836C21.3332 22.1928 21.2912 22.1963 21.2656 22.1982C21.2536 22.1991 21.2455 22.2001 21.2422 22.2002H3.75781C3.75455 22.2001 3.74643 22.1991 3.73438 22.1982C3.70881 22.1963 3.66679 22.1928 3.61426 22.1836C3.50524 22.1646 3.37102 22.1279 3.24609 22.0625C3.12503 21.9991 3.02277 21.914 2.94824 21.7969C2.87583 21.683 2.79985 21.4924 2.7998 21.167C2.7998 20.4442 3.16663 18.8122 4.54785 17.3652C5.90332 15.9452 8.30487 14.6338 12.5 14.6338ZM12.5 1.7998C13.6679 1.7998 14.7961 2.2855 15.6338 3.16309C16.4727 4.04196 16.9502 5.24178 16.9502 6.5C16.9502 7.75822 16.4727 8.95804 15.6338 9.83691C14.7961 10.7145 13.6679 11.2002 12.5 11.2002C11.3321 11.2002 10.2039 10.7145 9.36621 9.83691C8.52729 8.95804 8.0498 7.75822 8.0498 6.5C8.0498 5.24178 8.52729 4.04196 9.36621 3.16309C10.2039 2.2855 11.3321 1.7998 12.5 1.7998Z" stroke="currentColor" stroke-width="1.6"></path>
+                      </svg>
+                    </span><span class="nav-bar__text">Профиль</span></a>
+                </li>
+                <li class="nav-bar__item add">
+                  <a class="nav-bar__link" href="#" data-add-menu-btn=""><span class="nav-bar__icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_113_5656)">
+                          <path d="M8.9438 0.937499H3.23255C2.62388 0.937499 2.04014 1.17929 1.60974 1.60969C1.17934 2.04008 0.937549 2.62383 0.937549 3.2325V8.94C0.935571 9.24264 0.993473 9.54269 1.10792 9.82286C1.22237 10.103 1.3911 10.3578 1.60441 10.5725C1.81772 10.7872 2.07139 10.9576 2.35081 11.0739C2.63024 11.1902 2.9299 11.25 3.23255 11.25H8.9438C9.24739 11.2515 9.54827 11.1927 9.829 11.0771C10.1097 10.9615 10.3647 10.7914 10.5792 10.5765C10.7937 10.3617 10.9635 10.1064 11.0786 9.82548C11.1938 9.54456 11.252 9.24359 11.25 8.94V3.2325C11.2501 2.93017 11.1903 2.63081 11.0743 2.35163C10.9582 2.07246 10.7882 1.81896 10.5739 1.6057C10.3596 1.39244 10.1053 1.22363 9.82551 1.10896C9.54577 0.994285 9.24613 0.936017 8.9438 0.937499ZM10.125 8.94C10.1271 9.09585 10.0979 9.25054 10.0393 9.39497C9.98069 9.5394 9.89381 9.67067 9.78377 9.78106C9.67373 9.89145 9.54274 9.97874 9.3985 10.0378C9.25425 10.0969 9.09966 10.1265 8.9438 10.125H3.23255C3.07763 10.125 2.92425 10.0943 2.78132 10.0345C2.63838 9.97479 2.50873 9.88727 2.39989 9.77703C2.29104 9.66679 2.20518 9.53603 2.14727 9.39235C2.08936 9.24866 2.06056 9.0949 2.06255 8.94V3.2325C2.06255 2.9222 2.18582 2.6246 2.40523 2.40518C2.62465 2.18577 2.92225 2.0625 3.23255 2.0625H8.9438C9.09839 2.06101 9.25174 2.09018 9.39499 2.14831C9.53825 2.20644 9.66856 2.29239 9.7784 2.40118C9.88824 2.50997 9.97542 2.63946 10.0349 2.78215C10.0944 2.92483 10.1251 3.0779 10.125 3.2325V8.94ZM20.8913 0.937499H14.9325C14.6465 0.936016 14.3629 0.991083 14.0982 1.09954C13.8335 1.20799 13.5928 1.36768 13.39 1.56945C13.1872 1.77122 13.0262 2.01108 12.9164 2.27524C12.8066 2.5394 12.75 2.82267 12.75 3.10875V9.06375C12.7476 9.35123 12.8023 9.63633 12.911 9.90246C13.0198 10.1686 13.1804 10.4104 13.3835 10.6139C13.5866 10.8174 13.8282 10.9784 14.0941 11.0876C14.3601 11.1968 14.6451 11.252 14.9325 11.25H20.8913C21.4671 11.25 22.0194 11.0212 22.4266 10.6141C22.8338 10.2069 23.0625 9.6546 23.0625 9.07875V3.10875C23.0616 2.5332 22.8325 1.98151 22.4255 1.57454C22.0185 1.16756 21.4668 0.93849 20.8913 0.937499ZM21.9375 9.06375C21.9395 9.2024 21.9139 9.34007 21.8623 9.46874C21.8106 9.59741 21.7338 9.71453 21.6365 9.81328C21.5391 9.91202 21.4231 9.99043 21.2952 10.0439C21.1673 10.0975 21.03 10.125 20.8913 10.125H14.9325C14.7929 10.1265 14.6544 10.1001 14.5252 10.0472C14.396 9.99438 14.2786 9.91621 14.1801 9.81731C14.0815 9.71841 14.0038 9.60079 13.9514 9.47137C13.899 9.34195 13.873 9.20335 13.875 9.06375V3.10875C13.875 2.9704 13.9025 2.83343 13.9558 2.70575C14.009 2.57807 14.0871 2.46223 14.1855 2.36493C14.2838 2.26763 14.4005 2.1908 14.5287 2.13889C14.6569 2.08697 14.7942 2.06101 14.9325 2.0625H20.8913C21.1688 2.0625 21.4349 2.17273 21.6311 2.36894C21.8273 2.56515 21.9375 2.83127 21.9375 3.10875V9.06375ZM8.9438 12.75H3.23255C2.93022 12.75 2.63086 12.8097 2.35168 12.9258C2.07251 13.0418 1.81901 13.2119 1.60575 13.4262C1.39249 13.6405 1.22368 13.8948 1.10901 14.1745C0.994335 14.4543 0.936067 14.7539 0.937549 15.0562V20.7675C0.938541 21.3759 1.18065 21.959 1.61083 22.3892C2.04102 22.8194 2.62418 23.0615 3.23255 23.0625H8.9438C9.24613 23.064 9.54577 23.0057 9.82551 22.891C10.1053 22.7764 10.3596 22.6076 10.5739 22.3943C10.7882 22.181 10.9582 21.9275 11.0743 21.6484C11.1903 21.3692 11.2501 21.0698 11.25 20.7675V15.0562C11.2515 14.753 11.1929 14.4524 11.0775 14.1719C10.9622 13.8914 10.7923 13.6366 10.5779 13.4222C10.3634 13.2077 10.1086 13.0379 9.82812 12.9225C9.54764 12.8071 9.24708 12.7485 8.9438 12.75ZM10.125 20.7675C10.1251 21.0772 10.0023 21.3742 9.78369 21.5935C9.56508 21.8128 9.26845 21.9365 8.9588 21.9375H3.23255C2.92225 21.9375 2.62465 21.8142 2.40523 21.5948C2.18582 21.3754 2.06255 21.0778 2.06255 20.7675V15.0562C2.06106 14.9017 2.09023 14.7483 2.14836 14.6051C2.20649 14.4618 2.29244 14.3315 2.40123 14.2217C2.51002 14.1118 2.63951 14.0246 2.7822 13.9651C2.92488 13.9056 3.07795 13.875 3.23255 13.875H8.9438C9.09934 13.8735 9.25362 13.903 9.39762 13.9619C9.54161 14.0207 9.67243 14.1076 9.78242 14.2176C9.89241 14.3276 9.97936 14.4584 10.0382 14.6024C10.097 14.7464 10.1266 14.9007 10.125 15.0562V20.7675ZM20.8913 12.75H14.9325C14.6454 12.748 14.3607 12.8031 14.095 12.9121C13.8293 13.021 13.5879 13.1817 13.3848 13.3848C13.1818 13.5879 13.0211 13.8292 12.9121 14.0949C12.8031 14.3606 12.7481 14.6453 12.75 14.9325V20.8912C12.75 21.4664 12.9783 22.0181 13.3847 22.4252C13.791 22.8323 14.3423 23.0615 14.9175 23.0625H20.8913C21.4668 23.0615 22.0185 22.8324 22.4255 22.4255C22.8325 22.0185 23.0616 21.4668 23.0625 20.8912V14.9325C23.064 14.6464 23.009 14.3629 22.9005 14.0981C22.7921 13.8334 22.6324 13.5927 22.4306 13.3899C22.2288 13.1871 21.989 13.0262 21.7248 12.9163C21.4606 12.8065 21.1774 12.75 20.8913 12.75ZM21.9375 20.8912C21.9375 21.1687 21.8273 21.4348 21.6311 21.6311C21.4349 21.8273 21.1688 21.9375 20.8913 21.9375H14.9325C14.7942 21.939 14.6569 21.913 14.5287 21.8611C14.4005 21.8092 14.2838 21.7324 14.1855 21.6351C14.0871 21.5378 14.009 21.4219 13.9558 21.2942C13.9025 21.1666 13.875 21.0296 13.875 20.8912V14.9325C13.8735 14.7932 13.8999 14.655 13.9525 14.526C14.0051 14.3971 14.0829 14.2799 14.1814 14.1814C14.2799 14.0829 14.3971 14.005 14.5261 13.9524C14.6551 13.8998 14.7933 13.8735 14.9325 13.875H20.8913C21.1681 13.875 21.4337 13.9847 21.6298 14.1801C21.8259 14.3755 21.9366 14.6407 21.9375 14.9175V20.8912Z" fill="currentColor" stroke="currentColor" stroke-width="0.4"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_113_5656">
+                            <rect width="24" height="24" fill="white"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span><span class="nav-bar__text">Ещё</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <nav class="mega-menu" data-mega-menu="true">
+          <ul class="mega-menu__list">
+            <li class="mega-menu__item">
+              <button class="mega-menu__btn" data-sub-menu-btn="0">
+                <a class="mega-menu__link" href="#">Последняя цена</a>
+              </button>
+              <ul class="mega-menu__sub-list" data-sub-menu="0">
+                <li class="mega-menu__sub-list-parent-item">
+                  <button class="mega-menu__sub-list-btn" data-sub-menu-close="0">
+                    <a class="mega-menu__sub-list-parent-link" href="#">Последняя цена</a>
+                  </button>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Фольга</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Сезонные предложения</a>
+            </li>
+            <li class="mega-menu__item">
+              <button class="mega-menu__btn" data-sub-menu-btn="2">
+                <a class="mega-menu__link" href="#">Одноразовая посуда и аксессуары</a>
+              </button>
+              <ul class="mega-menu__sub-list" data-sub-menu="2">
+                <li class="mega-menu__sub-list-parent-item">
+                  <button class="mega-menu__sub-list-btn" data-sub-menu-close="2">
+                    <a class="mega-menu__sub-list-parent-link" href="#">Одноразовая посуда и аксессуары</a>
+                  </button>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Фольга</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mega-menu__item">
+              <button class="mega-menu__btn" data-sub-menu-btn="3">
+                <a class="mega-menu__link" href="#">Барные аксессуары</a>
+              </button>
+              <ul class="mega-menu__sub-list" data-sub-menu="3">
+                <li class="mega-menu__sub-list-parent-item">
+                  <button class="mega-menu__sub-list-btn" data-sub-menu-close="3">
+                    <a class="mega-menu__sub-list-parent-link" href="#">Барные аксессуары</a>
+                  </button>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Фольга</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Пакеты</a>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Гигиеническая продукция</a>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Бытовая химия</a>
+            </li>
+            <li class="mega-menu__item">
+              <button class="mega-menu__btn" data-sub-menu-btn="7">
+                <a class="mega-menu__link" href="#">Хозяйственные губки, салфетки</a>
+              </button>
+              <ul class="mega-menu__sub-list" data-sub-menu="7">
+                <li class="mega-menu__sub-list-parent-item">
+                  <button class="mega-menu__sub-list-btn" data-sub-menu-close="7">
+                    <a class="mega-menu__sub-list-parent-link" href="#">Хозяйственные губки, салфетки</a>
+                  </button>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Фольга</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Средства индивидуальной защиты</a>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Инвентарь для уборки</a>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Бытовая химия</a>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Упаковочные материалы</a>
+            </li>
+            <li class="mega-menu__item">
+              <button class="mega-menu__btn" data-sub-menu-btn="12">
+                <a class="mega-menu__link" href="#">Чековая лента и маркировочная продукция</a>
+              </button>
+              <ul class="mega-menu__sub-list" data-sub-menu="12">
+                <li class="mega-menu__sub-list-parent-item">
+                  <button class="mega-menu__sub-list-btn" data-sub-menu-close="12">
+                    <a class="mega-menu__sub-list-parent-link" href="#">Чековая лента и маркировочная продукция</a>
+                  </button>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Фольга</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Формы алюминиевые</a>
+                </li>
+                <li class="mega-menu__sub-list-item">
+                  <a class="mega-menu__sub-list-link" href="#">Мешки кондитерские</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mega-menu__item">
+              <a class="mega-menu__link" href="#">Канцелярия</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="section hero-page" id="hero-page">
+          <div class="container hero-page__container">
+            <nav class="breadcrumbs">
+              <a href="#">Главная</a><span>»</span>Регистрация
+            </nav>
+            <h1 class="title-2 hero-page__title">Зарегистрироваться</h1>
+          </div>
+        </section>
+        <section class="section registration" id="registration">
+          <div class="container registration__container">
+            <p class="registration__text">У вас уже есть аккаунт? <a class="link" href="/">Войти</a>
+            </p>
+            <div class="registration__form-wrapper box">
+              <form class="registration__form  checkout__form checkout-form" action="#">
+                <div class="checkout-form__info">
+                  <h3 class="checkout-form__title title-3">Контактное лицо</h3>
+                  <div class="form-box">
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="last_name">Фамилия<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="last_name" id="last_name" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="first_name">Имя<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="first_name" id="first_name" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="position">Должность<!-- --> </label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" name="position" id="position" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="phone">Телефон<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="phone" required="" name="phone" id="phone" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-form__company">
+                  <h3 class="checkout-form__title title-3">Информация о компании</h3>
+                  <div class="form-box">
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="company_name">Название<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="company_name" id="company_name" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="company_unp">УНП<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="company_unp" id="company_unp" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="company_account">Расчётный счёт<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="company_account" id="company_account" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="company_bank">Банк<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="company_bank" id="company_bank" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="company_address">Юр.адрес<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="company_address" id="company_address" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="company_shipping_address">Адрес разгрузки<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="text" required="" name="company_shipping_address" id="company_shipping_address" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-form__login-info">
+                  <h3 class="checkout-form__title title-3">Данные для входа</h3>
+                  <div class="form-box">
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="login_email">E-mail<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="email" required="" name="login_email" id="login_email" placeholder=""><span class="form-input__hint">Является логином для входа на сайт</span>
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="login_password">Пароль<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="password" required="" name="login_password" id="login_password" placeholder=""><span class="form-input__hint">Длина не менее 8 символов</span>
+                      </div>
+                    </div>
+                    <div class="form-input checkout-form__form-input">
+                      <label class="form-input__label" for="login_password_2">Подтвердите пароль<!-- --> <span class="red">*</span></label>
+                      <div class="form-input__input-box">
+                        <input class="form-input__input" type="password" required="" name="login_password_2" id="login_password_2" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="checkout-form__text"><span class="red">*</span> поля, обязательные для заполнения</p>
+                <div class="checkout-form__btn-box">
+                  <label class="checkbox-custom checkout-form__accept custom-checkbox">
+                    <input class="checkbox-custom__input" type="checkbox" name="accept-form" checked="" value="accept-form"><span class="checkbox-custom__fake"></span><span class="checkbox-custom__text"><span>Я соглашаюсь с <a href="/" class="link">Политикой обработки персональных данных</a></span></span>
+                  </label>
+                  <button class="checkout-form__btn btn" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+            <div class="registration__info box">
+              <div class="registration__box">
+                <h3 class="registration__title title-3">Условия сотрудничества</h3>
+                <div class="registration__descr">
+                  <ul>
+                    <li>Мы сотрудничаем только с юридическими лицами и индивидуальными предпринимателями.</li>
+                    <li>Возможен наличный и безналичный расчёт, расчёт в розничных магазинах.</li>
+                    <li>Доставка по Беларуси.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="registration__box">
+                <h3 class="registration__title title-3">Как стать нашим клиентом</h3>
+                <div class="registration__descr">
+                  <ol>
+                    <li>Заполните заявку при помощи формы обратной связи или позвоните менеджеру</li>
+                    <li>Заключите договор</li>
+                    <li>Получите индивидуальную скидку, доступ к полной версии оптового интернет-магазина</li>
+                    <li>Совершайте оптовые закупки товаров для дома, офиса и школы на самых выгодных условиях!</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__top footer-top">
+            <div class="footer-top__col-info">
+              <div class="logo footer__logo">
+                <a href="#">
+                  <img src="images/logo.png" alt="Logo">
+                </a>
+              </div>
+              <div class="footer__descr">
+                <p>Актуальные действующие цены и наличие товара уточняйте у Вашего менеджера</p>
+              </div>
+              <div class="footer__links-box">
+                <a href="#" class="footer__link">Политика обработки персональных данных</a>
+                <a href="#" class="footer__link">Политика обработки файлов куки</a>
+              </div>
+            </div>
+            <div class="footer-top__col-nav">
+              <nav class="footer__nav footer-menu">
+                <h3 class="footer__title">Меню</h3>
+                <ul class="footer-menu__list">
+                  <li>
+                    <a href="#">О компании</a>
+                  </li>
+                  <li>
+                    <a href="#">Навiны</a>
+                  </li>
+                  <li>
+                    <a href="#">Вопрос-ответ</a>
+                  </li>
+                  <li>
+                    <a href="#">Возврат и обмен</a>
+                  </li>
+                  <li>
+                    <a href="#">Оплата и доставка</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="footer__subscribe">
+                <h3 class="footer__title">Оставайтесь в курсе новостей и акций</h3>
+                <form class="footer__subscribe-form subscribe-form">
+                  <div class="subscribe-form__input-box">
+                    <input class="subscribe-form__input" type="email" placeholder="E-mail">
+                    <button class="btn subscribe-form__btn" type="submit">Подписаться</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="footer-top__col-contacts">
+              <h3 class="footer__title">Как с нами связаться</h3>
+              <ul class="phone-box footer__phone-box">
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/phone.svg&quot;)">
+                  <a class="phone-box__link" href="tel:+375222637171" target="_blank" rel="noreferrer">+375 222 63-71-71</a>
+                </li>
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/phone.svg&quot;)">
+                  <a class="phone-box__link" href="tel:+375293955171" target="_blank" rel="noreferrer">+375 29 395-51-71</a>
+                  <a class="phone-box__icon-link" href="tel:+375293955171" aria-label="Перейти в Вайбер">
+                    <img src="images/icons/viber.svg" alt="Вайбер">
+                  </a>
+                  <a class="phone-box__icon-link" href="tel:+375293955171" aria-label="Перейти в Телеграм">
+                    <img src="images/icons/tg.svg" alt="Телеграм">
+                  </a>
+                </li>
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/email.svg&quot;)">
+                  <a class="phone-box__link" href="mailto:pakettiby@gmail.com" target="_blank" rel="noreferrer">pakettiby@gmail.com</a>
+                </li>
+                <li class="phone-box__item custom-icon" style="--item-icon:url(&quot;../images/icons/inst.svg&quot;)">
+                  <a class="phone-box__link" href="https://www.instagram.com/paketti.by/" target="_blank" rel="noreferrer">paketti.by</a>
+                </li>
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/pin.svg&quot;)">
+                  <a class="phone-box__link" href="https://yandex.by/maps/-/CLvTjHyZ" target="_blank" rel="noreferrer">г. Могилев, ул. Чигринова 9</a>
+                </li>
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/phone.svg&quot;)">
+                  <a class="phone-box__link" href="tel:+375293897034" target="_blank" rel="noreferrer">+375 29 389-70-34</a>
+                </li>
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/pin.svg&quot;)">
+                  <a class="phone-box__link" href="https://yandex.by/maps/-/CLvTjXj-" target="_blank" rel="noreferrer">г. Могилев, пер. Комиссариатский 5</a>
+                </li>
+                <li class="phone-box__item" style="--item-icon:url(&quot;../images/icons/phone.svg&quot;)">
+                  <a class="phone-box__link" href="tel:+375447320600" target="_blank" rel="noreferrer">+375 44 732-06-00</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-block footer__content-descr">
+            <p>© 2025 Общество с ограниченной ответственностью &quot;ПАКЕТТИ&quot;, интернет-магазин www.paketti.by, <a href="mailto:pakettiby@gmail.com">pakettiby@gmail.com</a> ООО &quot;ПАКЕТТИ&quot;. Зарегистрировано Минским городским исполнительным комитетом №970 от 31.08.2000г. УНП 790643321. Регистрация в Торговом реестре Республики Беларусь №210825 04.03.2015г.</p>
+            <img src="images/pay-method.png" alt="Принимаем платежи" aria-label="Принимаем платежи">
+          </div>
+          <div class="footer-block footer__content-descr">
+            <p>Контакты для обращения покупателей (по вопросам нарушения их прав): <br>
+              <a href="tel:+375222637171">+375 222 63-71-71</a>, <a href="mailto:pakettiby@gmail.com">pakettiby@gmail.com</a>
+            </p>
+            <p>Телефон уполномоченных по защите прав потребителей: <br>
+              <a href="tel:+375 172805465">+375 17 280 54 65</a> – администрация Первомайского района г.Минска
+            </p>
+          </div>
+        </div>
+      </footer>
+      <a class="scroll-to-top" href="#" aria-label="В начало">
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.3414 0.253178L0.271404 10.5303C-0.0910834 10.867 -0.0904749 11.4122 0.273279 11.7483C0.636944 12.0842 1.22612 12.0833 1.58892 11.7466L12 2.08118L22.4111 11.7469C22.7739 12.0836 23.3627 12.0845 23.7265 11.7486C23.9088 11.5801 24 11.3594 24 11.1386C24 10.9184 23.9095 10.6985 23.7284 10.5303L12.6586 0.253178C12.4844 0.0910175 12.2471 1.40151e-07 12 1.43098e-07C11.7529 1.46045e-07 11.516 0.0912599 11.3414 0.253178Z" fill="currentColor"></path>
+        </svg>
+      </a>
+      <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner__container container">
+          <p class="cookie-banner__content">Для удобства пользователей сайта используются файлы cookie.<br>Продолжая просмотр этого сайта, вы соглашаетесь на обработку файлов cookie в соответствии с <a href="/cookie-policy" target="_blank">Политикой обработки файлов cookie</a>
+          </p>
+          <div class="cookie-banner__buttons">
+            <button id="cookie-accept" class="btn">Принять</button>
+            <button id="cookie-decline" class="btn btn--stroke">Отклонить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

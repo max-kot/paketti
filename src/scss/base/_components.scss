@@ -12,6 +12,7 @@
 	font-size: adapt(36, 24);
 	font-weight: 700;
 	text-align: center;
+	line-height: 130%;
 
 	&:not(:last-child) {
 		margin-bottom: adapt(32, 24);
@@ -19,8 +20,9 @@
 }
 .title-3 {
 	@include reset;
-	font-size: adapt(18, 14);
-	font-weight: 600;
+	font-size: adapt(18, 16);
+	font-weight: 700;
+	line-height: 130%;
 }
 // Grid
 .grid {
@@ -198,3 +200,8 @@
 		color: var(--color-accent);
 	}
 }
+
+.red {
+	color: var(--color-accent);
+}
+

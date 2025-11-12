@@ -8,6 +8,7 @@
 	--color-accent: #ee1d1d;
 	--color-accent-light: #ff2f2f;
 	--color-blue: #2c60e5;
+	--color-green: #23b24b;
 
 	--color-header: #f7f4f4;
 	--color-footer: #dfdcd7;
@@ -24,6 +25,10 @@
 	--header-height: 147px;
 	--nav-bar-height: 68px;
 	--product-bar-height: 44px;
+	--account-nav-link-width: 190px;
+	@include media($mobile-sm) {
+		--account-nav-link-width: 140px;
+	}
 	--section-padding: #{adapt(56, 30)};
 	// Container
 	--container-width: 1200px;

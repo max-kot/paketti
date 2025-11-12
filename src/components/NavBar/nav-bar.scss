@@ -8,6 +8,7 @@
 		background: var(--color-header);
 		padding-inline: container-padding();
 		padding-block: 14px;
+		color: var(--color-gray-3);
 	}
 	&__list {
 		@include reset;

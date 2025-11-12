@@ -1,0 +1,79 @@
+@use "@/scss/tools" as *;
+@use "@/scss/base/components" as *;
+
+.account-section {
+	--account-nav-link-gap: 4px;
+	
+	padding-top: unset;
+	&__menu {
+	}
+
+	&__content {
+		border-top-left-radius: 0;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: calc((var(--account-nav-link-width) * var(--offset-pos)) + (var(--account-nav-link-gap) * var(--offset-pos)));
+			width: calc(var(--account-nav-link-width) - 2px);
+			height: 10px;
+			background: var(--color-white);
+			z-index: 5;
+			transform: translateY(-90%);
+			pointer-events: none;
+
+			@include media($mobile) {
+				display: none;
+			}
+		}
+	}
+}
+.account-nav {
+	z-index: 3;
+	&__list {
+		@include reset;
+		list-style-type: none;
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
+		gap: var(--account-nav-link-gap);
+	}
+
+	&__item {
+		--offset-pos: 1;
+	}
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		display: inline-flex;
+		justify-content: center;
+		@extend .box;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		width: 190px;
+		line-height: 1;
+		opacity: 0.5;
+		font-size: 16px;
+		font-weight: 600;
+		transition: all 0.3s;
+
+		@include media($tablet-sm) {
+			width: 140px;
+			font-size: 14px;
+			padding: 14px 8px;
+		}
+
+		@include hover {
+			opacity: 1;
+		}
+
+		&.active {
+			opacity: 1;
+			color: var(--color-accent);
+		}
+	}
+}
+.account-order {
+	padding: adapt(12, 8);
+}

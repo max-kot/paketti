@@ -7,6 +7,7 @@ export class Menu {
 			btnActiveClass: 'active',
 			closeBtns: ['a'],
 			scrollTo: '', // если нужно прокрутить контейнер до submenu
+			btnIsLabel: false,  // если кнопка label то срабатывает дважды
 		};
 
 		this.params = { ...defaultParams, ...params };
@@ -23,11 +24,11 @@ export class Menu {
 	}
 
 	init() {
-		document.addEventListener('click', (e) => {
+		const eventTarget = this.params.btnIsLabel ? 'pointerdown' : 'click'
+		document.addEventListener(eventTarget, (e) => {
 			const menu = this.menuEl;
 			const isBtn = e.target.closest(this.params.btn);
 			const isInsideMenu = e.target.closest(this.params.menu);
-
 			if (isBtn) {
 				const btn = isBtn;
 				if (btn.tagName === 'A') e.preventDefault();
@@ -48,7 +49,7 @@ export class Menu {
 				}
 				return; // не продолжаем, если это клик по кнопке
 			}
-
+			if (!menu) return;
 			if (this.params.closeBtns.length && menu.classList.contains(this.params.activeClass)) {
 				const allBtns = this.params.closeBtns.join(',');
 				if (e.target.closest(allBtns)) {

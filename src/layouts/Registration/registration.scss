@@ -1,0 +1,52 @@
+@use "@/scss/tools" as *;
+
+.registration {
+	padding-top: unset;
+	&__container{
+		display: grid;
+		grid-template-columns: 1fr 0.65fr;
+		gap: 24px;
+		justify-items: center;
+		align-items: start;
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__text {
+		@include reset;
+		grid-column: 1 / -1;
+	}
+
+	&__form-wrapper {
+		width: 100%;
+		@include media($mobile) {
+			order: 3;
+		}
+	}
+
+	&__form {
+	}
+
+	&__info {
+		width: 100%;
+		display: grid;
+		gap: adapt(32, 24);
+	}
+
+	&__box {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__descr {
+		@include reset-child;
+		ul, ol {
+			padding-left: 24px;
+		}
+	}
+}

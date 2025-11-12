@@ -1,0 +1,89 @@
+@use "@/scss/tools" as *;
+
+.cart {
+	padding-top: unset;
+
+	.container {
+		display: grid;
+		gap: 24px;
+		width: 100%;
+	}
+	&__table {
+	}
+
+	&__totals {
+		max-width: 575px;
+		width: 100%;
+		margin-left: auto;
+
+		@include media($mobile) {
+			max-width: 100%;
+		}
+	}
+}
+.cart-totals {
+	display: flex;
+	gap: adapt(60, 24);
+
+	@include media($mobile) {
+		flex-wrap: wrap;
+	}
+
+	& > * {
+		flex: 1;
+		@include media($mobile) {
+			flex: 1 1 100%;
+		}
+	}
+	&__info {
+		@include reset;
+		list-style-type: none;
+		display: grid;
+		gap: 10px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+
+		& > * {
+			flex: 0 1 45%;
+		}
+	}
+
+	&__name {
+		color: var(--color-gray-7);
+	}
+
+	&__value {
+		text-align: right;
+	}
+
+	&__btn-box {
+		display: flex;
+		gap: 12px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__price-box {
+		display: flex;
+		gap: 10px;
+		justify-content: space-between;;
+		font-size: 20px;
+		font-weight: 800;
+	}
+
+	&__text {
+	}
+
+	&__price {
+		color: var(--color-accent);
+	}
+
+	&__link-checkout.btn {
+		padding-block: 12px;
+		justify-content: center;
+	}
+}

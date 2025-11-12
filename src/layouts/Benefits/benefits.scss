@@ -2,7 +2,9 @@
 
 .benefits {
 	padding-top: adapt(56, 32);
-
+	&__title {
+		margin-bottom: 24px;
+	}
 	&__list {
 		@include reset;
 		list-style-type: none;
