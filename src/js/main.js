@@ -166,4 +166,6 @@ new Spoiler('[data-spoiler-delivery]', {
 	createButton: false,
 });
 
+new Spoiler();
+
 new PasswordShow();

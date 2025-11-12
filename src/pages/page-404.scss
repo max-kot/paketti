@@ -1,0 +1,39 @@
+@use "@/scss/tools" as *;
+
+.page-404 {
+	&__container {
+		padding-top: adapt(56, 32);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__title {
+	}
+
+	&__404 {
+		@include reset;
+		font-size: adapt(220, 160);
+		line-height: 1;
+		font-weight: 700;
+		color: #540398;
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		text-align: center;
+		@include reset;
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__btn {
+		max-width: 300px;
+		width: 100%;
+		justify-content: center;
+	}
+}

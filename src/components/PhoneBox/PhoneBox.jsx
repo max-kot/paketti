@@ -23,19 +23,42 @@ export default ({ className, data }) => {
 					iconType = 'url("../images/icons/pin.svg")'
 				} else if (type === 'email') {
 					iconType = 'url("../images/icons/email.svg")'
+				} else if (type === 'time') {
+					iconType = 'url("../images/icons/time--white.svg")'
 				} else {
 					iconType = 'url("../images/icons/phone.svg")'
 				}
 
 				return (
 					<li className={clsx("phone-box__item", icon && 'custom-icon')} key={text} style={{ '--item-icon': iconType }}>
-						<a className="phone-box__link" href={hrefMod} target="_blank" rel="noreferrer">{text}</a>
-						{viber && <a className="phone-box__icon-link" href={`tel:${href}`} aria-label="Перейти в Вайбер">
-							<img src="images/icons/viber.svg" alt="Вайбер" />
-						</a>}
-						{tg && <a className="phone-box__icon-link" href={`tel:${href}`} aria-label="Перейти в Телеграм">
-							<img src="images/icons/tg.svg" alt="Телеграм" />
-						</a>}
+						{href && (
+							<>
+								<a className="phone-box__link" href={hrefMod} target="_blank" rel="noreferrer">
+									{text}
+								</a>
+
+								{viber && (
+									<a
+										className="phone-box__icon-link"
+										href={`viber://chat?number=${href}`}
+										aria-label="Перейти в Вайбер"
+									>
+										<img src="images/icons/viber.svg" alt="Вайбер" />
+									</a>
+								)}
+
+								{tg && (
+									<a
+										className="phone-box__icon-link"
+										href={`https://t.me/${tg}`}
+										aria-label="Перейти в Телеграм"
+									>
+										<img src="images/icons/tg.svg" alt="Телеграм" />
+									</a>
+								)}
+							</>
+						)}
+						{!href && text}
 					</li>
 				)
 			})}

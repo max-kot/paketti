@@ -21,7 +21,11 @@
 	}
 	&__title {
 	}
-
+	&__text {
+		@include reset;
+		font-size: 18px;
+		font-weight: 600;
+	}
 	&__list {
 		@include reset;
 		list-style-type: none;
@@ -54,6 +58,7 @@
 	}
 
 	&__image-box {
+		@include reset;
 		position: absolute;
 		top: 0;
 		left: 0;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина - Пакетти</title>
+    <title>Политика обработки файлов куки - Пакетти</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -305,316 +305,59 @@
         <section class="section hero-page" id="hero-page">
           <div class="container hero-page__container">
             <nav class="breadcrumbs">
-              <a href="#">Главная</a><span>»</span>Корзина
+              <a href="#">Главная</a><span>»</span>Политика обработки файлов куки
             </nav>
-            <h1 class="title-2 hero-page__title">Корзина</h1>
+            <h1 class="title-2 hero-page__title">Политика обработки файлов куки</h1>
           </div>
         </section>
-        <section class="section cart" id="cart">
-          <div class="container cart__container">
-            <table class="cart__table cart-table">
-              <tbody class="cart-table__tbody">
-                <tr class="box cart-table__row ">
-                  <td class="cart-table__thumb">
-                    <a class="cart-table__link-image image-box" href="/">
-                      <img src="images/product-1.jpg" alt="Соломка для напитков">
-                    </a>
-                  </td>
-                  <td class="cart-table__info">
-                    <a class="cart-table__link-title" href="/">
-                      <h3 class="cart-table__title">Соломка для напитков</h3>
-                      <p class="cart-table__sku">Арт. <!-- -->123456</p>
-                    </a>
-                  </td>
-                  <td class="cart-table__counter">
-                    <div class="cart-table__select-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                  </td>
-                  <td class="cart-table__price">
-                    <div class="price-box cart-table__price-box">
-                      <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
-                      <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                    </div>
-                  </td>
-                  <td class="cart-table__remove">
-                    <button class="cart-table__remove-btn">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 5L9.5 9.5M5 5L0.5 0.5M5 5L0.5 9.5M5 5L9.5 0.5" stroke="currentColor" stroke-linecap="round"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="box cart-table__row ">
-                  <td class="cart-table__thumb">
-                    <a class="cart-table__link-image image-box" href="/">
-                      <img src="images/product-2.jpg" alt="Одноразовая посуда и аксессуары">
-                    </a>
-                  </td>
-                  <td class="cart-table__info">
-                    <a class="cart-table__link-title" href="/">
-                      <h3 class="cart-table__title">Одноразовая посуда и аксессуары</h3>
-                      <p class="cart-table__sku">Арт. <!-- -->789456</p>
-                    </a>
-                  </td>
-                  <td class="cart-table__counter">
-                    <div class="cart-table__select-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                  </td>
-                  <td class="cart-table__price">
-                    <div class="price-box cart-table__price-box">
-                      <div class="price-box__price-box"><span class="price-box__price">1050<span>р/шт</span></span><span class="price-box__text">с НДС</span></div>
-                      <div class="price-box__price-box"><span class="price-box__price">1040<span>р/шт</span></span><span class="price-box__text">без НДС</span></div>
-                    </div>
-                  </td>
-                  <td class="cart-table__remove">
-                    <button class="cart-table__remove-btn">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 5L9.5 9.5M5 5L0.5 0.5M5 5L0.5 9.5M5 5L9.5 0.5" stroke="currentColor" stroke-linecap="round"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="box cart-table__row ">
-                  <td class="cart-table__thumb">
-                    <a class="cart-table__link-image image-box" href="/">
-                      <img src="images/product-1.jpg" alt="Соломка для напитков">
-                    </a>
-                  </td>
-                  <td class="cart-table__info">
-                    <a class="cart-table__link-title" href="/">
-                      <h3 class="cart-table__title">Соломка для напитков</h3>
-                      <p class="cart-table__sku">Арт. <!-- -->123456</p>
-                    </a>
-                  </td>
-                  <td class="cart-table__counter">
-                    <div class="cart-table__select-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                  </td>
-                  <td class="cart-table__price">
-                    <div class="price-box cart-table__price-box">
-                      <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
-                      <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                    </div>
-                  </td>
-                  <td class="cart-table__remove">
-                    <button class="cart-table__remove-btn">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 5L9.5 9.5M5 5L0.5 0.5M5 5L0.5 9.5M5 5L9.5 0.5" stroke="currentColor" stroke-linecap="round"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="box cart-table__row ">
-                  <td class="cart-table__thumb">
-                    <a class="cart-table__link-image image-box" href="/">
-                      <img src="images/product-2.jpg" alt="Соломка для напитков">
-                    </a>
-                  </td>
-                  <td class="cart-table__info">
-                    <a class="cart-table__link-title" href="/">
-                      <h3 class="cart-table__title">Соломка для напитков</h3>
-                      <p class="cart-table__sku">Арт. <!-- -->123456</p>
-                    </a>
-                  </td>
-                  <td class="cart-table__counter">
-                    <div class="cart-table__select-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                  </td>
-                  <td class="cart-table__price">
-                    <div class="price-box cart-table__price-box">
-                      <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
-                      <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                    </div>
-                  </td>
-                  <td class="cart-table__remove">
-                    <button class="cart-table__remove-btn">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 5L9.5 9.5M5 5L0.5 0.5M5 5L0.5 9.5M5 5L9.5 0.5" stroke="currentColor" stroke-linecap="round"></path>
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="cart__totals box cart-totals">
-              <ul class="cart-totals__info">
-                <li class="cart-totals__item"><span class="cart-totals__name">Товаров, 2 шт</span><span class="cart-totals__value">2 060,00 р</span></li>
-                <li class="cart-totals__item"><span class="cart-totals__name">Скидка</span><span class="cart-totals__value">200,00 р</span></li>
-                <li class="cart-totals__item"><span class="cart-totals__name">НДС</span><span class="cart-totals__value">20,00 р</span></li>
-                <li class="cart-totals__item"><span class="cart-totals__name">Доставка</span><span class="cart-totals__value">50,00 р</span></li>
+        <section class="section content-section" id="content-section">
+          <div class="container content-section__container">
+            <div class="content-section__descr">
+              <h2>1. Файлы cookie</h2>
+              <p>Файлы cookie (далее — cookie) являются текстовыми файлами, которые сохраняются в браузере компьютера или мобильного устройства пользователя при посещении официального интернет-сайта [название компании] (далее — сайт) и отражают совершенные пользователем действия. Они служат для идентификации браузера при повторном посещении сайта и используются для различных целей, например, для запоминания пользовательских настроек. Кроме того, они могут использоваться для сбора статистических данных о взаимодействии пользователей с сайтом и для улучшения его функциональности.</p>
+              <p>Файлы cookie не представляют собой угрозы для устройства пользователя, поскольку являются текстом, а не запускаемыми программами.</p>
+              <p>Пользователи имеют возможность управлять настройками файлов cookie в своем браузере, включая блокировку или удаление уже существующих файлов.</p>
+              <p>Цель обработки cookie — хранение информации о пользователе, которая может быть использована для улучшения его опыта взаимодействия с сайтом. Сookie могут содержать различные данные, такие как предпочтения пользователя, историю посещения сайта и так далее.</p>
+              <p>В зависимости от цели обработки cookie могут использоваться для следующих задач:</p>
+              <ul>
+                <li>хранение настроек пользователя;</li>
+                <li>сбор статистических данных в обобщенном виде;</li>
+                <li>улучшение работы сайта и повышение удобства его использования.</li>
               </ul>
-              <div class="cart-totals__btn-box">
-                <div class="cart-totals__price-box"><span class="cart-totals__text">Итого</span><span class="cart-totals__price">2 080,00 р</span></div>
-                <a class="cart-totals__link-checkout btn" href="#">Перейти к оформлению</a>
-              </div>
+              <p>Сайт не использует файлы cookie для идентификации пользователей.</p>
+              <h2>2. Типы cookie</h2>
+              <p>На сайте обрабатываются следующие типы cookie:</p>
+              <ul>
+                <li><strong>Обязательные</strong> — необходимы для работы сайта и используются для различных целей, таких как сохранение предпочтений пользователей, а также для обеспечения безопасности сайта.</li>
+                <li><strong>Функциональные</strong> — используются для сохранения информации о предпочтениях пользователя, таких как язык интерфейса или выбранный регион. Они позволяют сайту автоматически адаптироваться к этим параметрам при повторных посещениях и обеспечивают работу полезных функций, таких как использование функций Яндекс Карт, запоминание настроек посетителей сайта и улучшение взаимодействия пользователя со страницами сайта. Этот тип файлов cookie является необходимым для нормальной работы сайта и его функциональности.</li>
+                <li><strong>Целевые и аналитические</strong> — помогают анализировать популярность сайта, узнать, какие страницы наиболее посещаемы, сколько времени пользователи проводят на сайте, как они перемещаются по сайту и так далее. Полученная информация может использоваться для улучшения пользовательского опыта и увеличения эффективности веб-сайта.</li>
+              </ul>
+              <h2>3. Виды cookie по типу хранения</h2>
+              <p>По типу хранения cookie могут быть разделены на две категории:</p>
+              <ul>
+                <li><strong>Сессионные cookie</strong> — сохраняются в браузере пользователя только на время сеанса, то есть до тех пор, пока пользователь не закроет браузер или не выйдет из системы. Эти cookie используются для сохранения информации о состоянии пользователя и обеспечения безопасности сеанса.</li>
+                <li><strong>Постоянные cookie</strong> — сохраняются на длительное время в браузере пользователя и могут использоваться для хранения информации, которая будет доступна при следующем визите на сайт. Такие cookie могут содержать информацию о предпочтениях пользователя, например, язык интерфейса, данные авторизации, а также предоставлять возможность отслеживания поведения пользователя в Интернете.</li>
+              </ul>
+              <p>Со списком файлов cookie и сроком их хранения пользователь может ознакомиться в Приложении к настоящей Политике.</p>
+              <h2>4. Настройки использования cookie</h2>
+              <p>Пользователи могут «Принять все» или «Отклонить все» обрабатываемые на сайте cookie.</p>
+              <p>Пользователь сайта может отказаться от использования файлов cookie, полученных из устройства.</p>
+              <p>При этом корректная работа сайта возможна только в случае использования функциональных cookie. Отключение статистических cookie не позволяет определять предпочтения пользователей сайта, в том числе наиболее и наименее популярные страницы, и принимать меры по совершенствованию работы сайта исходя из предпочтений пользователей.</p>
+              <h2>5. Управление cookie через браузер</h2>
+              <p>Помимо настроек cookie на сайте пользователи могут принять или отклонить сбор всех или некоторых cookie в настройках своего браузера.</p>
+              <p>Пользователи могут использовать режим &quot;инкогнито&quot; в браузерах, чтобы ограничить объем информации, сохраняемой на их компьютере, и автоматически удалять сессионные cookie. Кроме того, если пользователь желает удалить ранее сохраненные cookie, то он может выбрать соответствующую опцию в истории браузера или произвести ручную очистку устройства от уже сохраненных файлов cookie, а также отключить сбор файлов cookie в настройках браузера.</p>
+              <p>Важно понимать, что если пользователь выберет опцию отключения файлов cookie, то сайт не сможет гарантировать ему полноценную и эффективную работу всех функциональных возможностей сайта.</p>
+              <p>Вы можете узнать больше о параметрах управления файлами cookie, перейдя по внешним ссылкам, которые ведут на сайты основных браузеров. Там вы найдете подробную информацию об управлении файлами cookie в каждом конкретном браузере:</p>
+              <ul>
+                <li>Firefox</li>
+                <li>Google Chrome</li>
+                <li>Safari</li>
+                <li>Opera</li>
+                <li>Internet Explorer</li>
+                <li>Яндекс</li>
+                <li>Microsoft Edge</li>
+              </ul>
             </div>
-          </div>
-        </section>
-        <section class="section popular interested-products" id="popular interested-products">
-          <div class="container popular interested-products__container">
-            <h2 class="title-2 popular__title">Возможно вас заинтересует</h2>
-            <ul class="popular__list grid grid-4">
-              <li class="product-card">
-                <div class="product-card__image-box">
-                  <a class="product-card__image-link" href="#">
-                    <img src="images/product-1.jpg" alt="Соломка для напитков"><span class="product-card__flash hit-flash">Хит</span>
-                  </a>
-                  <a class="product-card__fav-btn fav-btn" href="#">
-                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
-                    </svg>
-                  </a>
-                </div>
-                <a class="product-card__content-link" href="#">
-                  <h3 class="title-3 product-card__title">Соломка для напитков</h3>
-                  <p class="product-card__sku">Код товара: <span>123456</span></p>
-                  <div class="price-box product-card__price-box">
-                    <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
-                    <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                  </div>
-                  <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
-                </a>
-                <div class="product-card__cart-btn-box">
-                  <form class="product-card__form">
-                    <div class="product-card__input-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                    <button type="submit" class="product-card__cart-btn btn">В корзину</button>
-                  </form>
-                </div>
-              </li>
-              <li class="product-card product-card--no-account">
-                <div class="product-card__image-box">
-                  <a class="product-card__image-link" href="#">
-                    <img src="images/product-2.jpg" alt="Одноразовая посуда и аксессуары">
-                  </a>
-                  <a class="product-card__fav-btn fav-btn" href="#">
-                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
-                    </svg>
-                  </a>
-                </div>
-                <a class="product-card__content-link" href="#">
-                  <h3 class="title-3 product-card__title">Одноразовая посуда и аксессуары</h3>
-                  <p class="product-card__sku">Код товара: <span>789456</span></p>
-                  <div class="price-box product-card__price-box">
-                    <div class="price-box__price-box"><span class="price-box__price">1050<span>р/шт</span></span><span class="price-box__text">с НДС</span></div>
-                    <div class="price-box__price-box"><span class="price-box__price">1040<span>р/шт</span></span><span class="price-box__text">без НДС</span></div>
-                  </div>
-                  <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
-                </a>
-                <div class="product-card__cart-btn-box">
-                  <form class="product-card__form">
-                    <div class="product-card__input-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                    <button type="submit" class="product-card__cart-btn btn">В корзину</button>
-                  </form>
-                </div>
-              </li>
-              <li class="product-card">
-                <div class="product-card__image-box">
-                  <a class="product-card__image-link" href="#">
-                    <img src="images/product-1.jpg" alt="Соломка для напитков"><span class="product-card__flash hit-flash">Хит</span>
-                  </a>
-                  <a class="product-card__fav-btn fav-btn" href="#">
-                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
-                    </svg>
-                  </a>
-                </div>
-                <a class="product-card__content-link" href="#">
-                  <h3 class="title-3 product-card__title">Соломка для напитков</h3>
-                  <p class="product-card__sku">Код товара: <span>123456</span></p>
-                  <div class="price-box product-card__price-box">
-                    <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
-                    <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                  </div>
-                  <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
-                </a>
-                <div class="product-card__cart-btn-box">
-                  <form class="product-card__form">
-                    <div class="product-card__input-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                    <button type="submit" class="product-card__cart-btn btn">В корзину</button>
-                  </form>
-                </div>
-              </li>
-              <li class="product-card">
-                <div class="product-card__image-box">
-                  <a class="product-card__image-link" href="#">
-                    <img src="images/product-2.jpg" alt="Соломка для напитков"><span class="product-card__flash hit-flash">Хит</span>
-                  </a>
-                  <a class="product-card__fav-btn fav-btn" href="#">
-                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16.8545 0.5C18.6949 0.500054 20.3925 1.25512 21.626 2.62207C22.8428 3.97075 23.5 5.79832 23.5 7.75586C23.5 9.79739 22.7489 11.6457 21.2061 13.5479C19.8411 15.2307 17.8894 16.9286 15.6846 18.8486C15.3059 19.1782 14.9029 19.5296 14.4834 19.8975L13.1836 21.0469C12.8576 21.3383 12.437 21.5 12 21.5C11.5627 21.5 11.1426 21.3377 10.8164 21.0459C9.93044 20.2543 9.07547 19.5099 8.31934 18.8516L8.31543 18.8486L6.71484 17.4473C5.17142 16.0807 3.81772 14.81 2.79395 13.5479C1.25111 11.6455 0.5 9.79741 0.5 7.75586C0.500011 5.79829 1.15724 3.97072 2.37402 2.62207C3.6075 1.25511 5.30495 0.5001 7.14551 0.5C8.44459 0.5 9.64334 0.896193 10.7021 1.66797L10.9121 1.82715L11.1191 1.99707C11.4324 2.26478 11.7262 2.56388 12 2.8916C12.3333 2.49274 12.6965 2.13644 13.0879 1.82715C14.1972 0.95049 15.4688 0.5 16.8545 0.5Z" stroke="currentColor"></path>
-                    </svg>
-                  </a>
-                </div>
-                <a class="product-card__content-link" href="#">
-                  <h3 class="title-3 product-card__title">Соломка для напитков</h3>
-                  <p class="product-card__sku">Код товара: <span>123456</span></p>
-                  <div class="price-box product-card__price-box">
-                    <div class="price-box__price-box"><span class="price-box__price">1030<span>р/шт</span></span><del class="price-box__price-old">1040<span>р/шт</span></del><span class="price-box__text">с НДС</span></div>
-                    <div class="price-box__price-box"><span class="price-box__price">1010<span>р/шт</span></span><del class="price-box__price-old">1020<!-- --> <span>р/шт</span></del><span class="price-box__text">без НДС</span></div>
-                  </div>
-                  <a class="btn btn--stroke product-card__btn" href="#"><span>Стать нашим клиентом</span></a>
-                </a>
-                <div class="product-card__cart-btn-box">
-                  <form class="product-card__form">
-                    <div class="product-card__input-box">
-                      <input type="number" min="25" step="25" value="25">
-                      <select>
-                        <option value="pcs" selected="">шт</option>
-                        <option value="block">блк</option>
-                        <option value="boxes">кор</option>
-                      </select>
-                    </div>
-                    <button type="submit" class="product-card__cart-btn btn">В корзину</button>
-                  </form>
-                </div>
-              </li>
-            </ul>
           </div>
         </section>
       </main>

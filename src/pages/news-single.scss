@@ -1,0 +1,39 @@
+@use "@/scss/tools" as *;
+
+.news-single {
+	padding-top: unset;
+	font-size: 16px;
+	line-height: 130%;
+	&__date {
+		@include reset;
+		font-size: 14px;
+		color: var(--color-gray-2);
+		margin-bottom: 24px;
+	}
+
+	&__descr {
+	}
+}
+.flex-box {
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+	@include media($mobile) {
+		flex-wrap: wrap;
+	}
+	& > * {
+		flex: 1;
+		@include media($mobile) {
+			width: 100%;
+			flex: 1 1 100%;
+		}
+	}
+	& > img {
+		width: calc(50% - 24px);
+		@include media($mobile) {
+			width: 100%;
+		}
+	}
+}
+.content {
+}

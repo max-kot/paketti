@@ -1,0 +1,39 @@
+@use "@/scss/tools" as *;
+
+.contacts {
+	&__container {
+		display: grid;
+		grid-template-columns: 376px 1fr;
+		gap: 32px;
+		@include media($tablet) {
+			grid-template-columns: 1fr;
+		}
+		
+	}
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		justify-content: space-between;
+	}
+
+	&__box {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__phone-box {
+		flex-direction: column;
+		align-items: start;
+	}
+
+	&__map {
+		min-height: 500px;
+	}
+}
+.title-3 {
+}

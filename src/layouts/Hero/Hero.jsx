@@ -1,6 +1,5 @@
 import Section from "@/ui/Section/Section";
 import "./hero.scss";
-import ImageBox from "@/ui/ImageBox/ImageBox";
 import Button from "@/ui/Button/Button";
 
 export default () => {
